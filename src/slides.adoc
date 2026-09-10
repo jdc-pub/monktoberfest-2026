@@ -1,0 +1,33 @@
+= What Technologists Owe Creatives
+Joey Carpinelli <joseph.carpinelli@icloud.com>
+
+// OUTLINE / NOTES
+//
+// . Technologists use unique tools for writing prose.
+// .. This section could be an introduction to me?
+// .. Did technologists turn writing into coding because we're anxious?
+// .. LaTeX for course notes.
+// .. Pluto notebooks for problem sets.
+// .. Markdown for essays and blog posts.
+// .. How many here write prose?
+// ... Lie if your hand isn't up already.
+// .. How many here write more than half of their prose in Google Docs or Microsoft Word?
+//
+// . I love creatives.
+// .. Creatives are professional _noticers_.
+// .. My wife calls from Wyoming: everyone has an enemy.
+// .. My wife calls me in Texas: is my enemy a literal child?
+// .. My wife calls another time: Katy's enemy is the Laramie Wizard.
+// .. Note I'm deliberately *not* using her name, I don't want you to think I don't know it.
+// .. We are both early in our careers with a minimal online presence.
+// .. I can use "Casey" or "my wife", whatever Casey wants?
+//
+// . Creatives do *not* love technologists right now.
+// .. I don't think any of us are surprised by that.
+// .. Their work has been stolen.
+// .. Their artifacts have been destroyed.
+// .. They've been told *directly* that they are replaceable by machines.
+//
+// . We can help creatives.
+// .. Definition of *nerd snipe*.
+// .. Low hanging fruit.
