@@ -31,3 +31,5 @@ Joey Carpinelli <joseph.carpinelli@icloud.com>
 // . We can help creatives.
 // .. Definition of *nerd snipe*.
 // .. Low hanging fruit.
+// .. Technology must be *wanted* by creatives.
+// ... I offered a prose tree-sitter-like extension that broke paragraphs into semantic components.
