@@ -30,6 +30,7 @@ Joey Carpinelli <joseph.carpinelli@icloud.com>
 //
 // . We can help creatives.
 // .. Definition of *nerd snipe*.
+// ... Did y'all know that the original comic was about literal murder, or perhaps manslaughter?
 // .. Low hanging fruit.
 // .. Technology must be *wanted* by creatives.
 // ... I offered a prose tree-sitter-like extension that broke paragraphs into semantic components.
