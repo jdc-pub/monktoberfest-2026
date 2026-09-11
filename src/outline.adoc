@@ -10,7 +10,6 @@ Joey Carpinelli <joseph.carpinelli@icloud.com>
 .. How many here write prose?
 ... Lie if your hand isn't up already.
 .. How many here write more than half of their prose in Google Docs or Microsoft Word?
-
 . I love creatives.
 .. Creatives are professional _noticers_.
 .. My wife calls from Wyoming: everyone has an enemy.
@@ -19,13 +18,11 @@ Joey Carpinelli <joseph.carpinelli@icloud.com>
 .. Note I'm deliberately *not* using her name, I don't want you to think I don't know it.
 .. We are both early in our careers with a minimal online presence.
 .. I can use "Casey" or "my wife", whatever Casey wants?
-
 . Creatives do *not* love technologists right now.
 .. I don't think any of us are surprised by that.
 .. Their work has been stolen.
 .. Their artifacts have been destroyed.
 .. They've been told *directly* that they are replaceable by machines.
-
 . We can help creatives.
 .. Definition of *nerd snipe*.
 ... Did y'all know that the original comic was about literal murder, or perhaps manslaughter?
