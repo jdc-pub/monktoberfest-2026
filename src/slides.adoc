@@ -1,10 +1,32 @@
 = What Technologists Owe Creatives
 Joey Carpinelli <joseph.carpinelli@icloud.com>
 
+// GOAL: introduce the talk
+
 [.notes]
 --
 . I'm so thankful to be here for the first time at the Monktoberfest.
 . I want to talk about technologists and creatives.
 . I care deeply about both of these communities.
-. I love creatives, in some cases literally: my wife is a creative writer; we were just married in June.
 --
+
+== Technologists
+
+// GOAL: introduce myself; introduce and define the term "technologist"
+
+[.notes]
+--
+. I am a technologist, though I fought the title for years.
+. Early on in school, I decided to pursue space systems engineering from a software perspective.
+. I finished my studies in electrical engineering, then aerospace engineering, and I started full-time at NASA's Johnson Space Center in their integrated systems analysis branch.
+. When I got my first pay stub, the title said: `A.S.T. Guidance, Navigation, & Controls`.
+. It turns out, my title was _not_ aerospace engineer, but aerospace _technologist_.
+. I was annoyed!
+. I asked my mentor: at the risk of sounding ungrateful, why is my title technologist and not engineer?
+. As it was explained to me: you cannot be formally referred to as an engineer within NASA until you complete your Professional Engineering certification.
+. This was my first introduction to the word _technologist_, and I did not like it.
+. In the years since, I've grown to love the word _technologist_ because in some ways it is more specific than the word _engineer_.
+. If you work to support the use of emerging technologies, you are a technologist.
+
+--
+
