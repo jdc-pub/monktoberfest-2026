@@ -6,6 +6,7 @@ Joey Carpinelli <joseph.carpinelli@icloud.com>
 .. Did technologists turn writing into coding because we're anxious?
 .. LaTeX for course notes.
 .. Pluto notebooks for problem sets.
+... Maybe show picture of problem set PDF being comically long?
 .. Markdown for essays and blog posts.
 .. How many here write prose?
 ... Lie if your hand isn't up already.
