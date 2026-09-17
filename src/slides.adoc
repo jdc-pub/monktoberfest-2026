@@ -16,17 +16,32 @@ Joey Carpinelli <joseph.carpinelli@icloud.com>
 
 [.notes]
 --
-. I am a technologist, though I fought the title for years.
-. Early on in school, I decided to pursue space systems engineering from a software perspective.
-. I finished my studies in electrical engineering, then aerospace engineering, and I started full-time at NASA's Johnson Space Center in their integrated systems analysis branch.
-. When I got my first pay stub, the title said: `A.S.T. Guidance, Navigation, & Controls`.
-. It turns out, my title was _not_ aerospace engineer, but aerospace _technologist_.
-. I was annoyed!
-. I asked my mentor: at the risk of sounding ungrateful, why is my title technologist and not engineer?
-. As it was explained to me: you cannot be formally referred to as an engineer within NASA until you complete your Professional Engineering certification.
-. This was my first introduction to the word _technologist_, and I did not like it.
-. In the years since, I've grown to love the word _technologist_ because in some ways it is more specific than the word _engineer_.
-. If you work to support the use of emerging technologies, you are a technologist.
-
+. I'm proud to be a technologist today, but the word mostly felt like an obstacle on the way to engineer for most of my career so far.
+. My first pay stub as a full-time engineer read _aerospace technologist_.
+. The U.S. Government won't call you an engineer unless you're formally certified as a _Professional Engineer_.
+. As I did the job, though, I grew to love the word.
+. It's both more specific and more expansive than the word _engineer_.
+. The word _technologist_ gets to the _what_ of your work much: we're building technology.
+. I also don't think you need to be an engineer to be a technologist.
+. For the purposes of this talk, you're a technologist if you work with or support the development of emerging technologies.
+. That includes non-technical roles within companies, theorists, and practitioners.
+. If you quibble with that definition, that's fine, but there's not currently a Wikipedia page for _technologist_.
 --
 
+== Creatives
+
+// GOAL: introduce my connections to creatives; introduce and define the term "creative"
+
+[.notes]
+--
+. I love creatives; in some cases, literally.
+. My wife is a creative writer, and we were just married in June.
+. Other members of my family are writers, animators, and filmmakers.
+. I use the word _creative_ and not _artist_ because I think their relationship is similar to _technologist_ and _engineering_.
+. Creatives are those for who creativity is the point.
+. They could be making art, but for the purposes of this talk, they could also be creating ad copy.
+--
+
+== Creatives
+
+// GOAL:
