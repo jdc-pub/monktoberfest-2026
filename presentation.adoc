@@ -1,4 +1,4 @@
-= What Technologists Owe Creatives
+= What Technologists +++<br>+++ Owe Creatives
 Joey Carpinelli <joseph.carpinelli@icloud.com>
 :imagesdir: ../img
 :revealjs_theme: simple
