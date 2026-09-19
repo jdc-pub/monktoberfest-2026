@@ -183,6 +183,15 @@ html:not(.reveal-print) .reveal .slides > section.present:not(.title) {
     border-left: 3px solid rgba(111, 91, 146, 0.85);
 }
 
+/* Screenshots: <span class="image"><img …></span> in .slide-content. The
+   slide background is lilac-tinted paper, not white, so a hairline border
+   defines where the screenshot ends; the corner radius is kept subtle. */
+
+.reveal .slide-content img {
+    border: 1px solid rgba(111, 91, 146, 0.45);
+    border-radius: 4px;
+}
+
 .reveal .dlist dt {
     font-weight: 700;
     color: #6f5b92;
