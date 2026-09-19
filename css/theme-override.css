@@ -116,7 +116,7 @@ html:not(.reveal-print) .reveal .slides > section:not(.title) {
 }
 
 html:not(.reveal-print) .reveal .slides > section.present:not(.title) {
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     align-items: flex-start;
 }
