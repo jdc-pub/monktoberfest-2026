@@ -112,6 +112,7 @@ html:not(.reveal-print) .reveal .slides > section:not(.title) {
     height: 100%;
     box-sizing: border-box;
     padding-top: 0.75em;
+    padding-bottom: 1.5em;
     text-align: left;
 }
 
@@ -130,7 +131,9 @@ html:not(.reveal-print) .reveal .slides > section.present:not(.title) {
 
 /* Auto top/bottom margins center the body in the space the pinned header
    leaves behind — and resolve to zero when the body is taller than that
-   space, so overflowing content stays put instead of being clipped. */
+   space, so overflowing content stays put instead of being clipped. The
+   section's bottom padding shifts the centering box up slightly for
+   optical centering (pure geometric centering reads as bottom-heavy). */
 
 .reveal .slide-content {
     flex: 0 1 auto;
