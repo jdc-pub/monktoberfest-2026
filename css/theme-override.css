@@ -1,0 +1,148 @@
+/* ==========================================================================
+   theme-override.css — presentation styling
+   --------------------------------------------------------------------------
+   Loaded LAST by asciidoctor-revealjs (via :customcss:), after the `simple`
+   theme and the converter's AsciiDoc-integration styles. Everything here
+   overrides those.
+
+   Direction: muted plum ink on lilac-tinted paper. Left-aligned, hairline
+   rules, one accent. No gradients, glows, or shadows.
+
+   Layers:
+     0. Fonts   — vendored in css/fonts/, base64-embedded by tools/inline.py
+     1. Tokens  — reveal.js `--r-*` variables drive most of the look
+     2. Title slide
+     3. Section slides
+     4. AsciiDoc blocks
+   ========================================================================== */
+
+/* ----- 0. Fonts (family names are ours; files are vendored) ----------------- */
+/* Noto Sans is a variable font: one file interpolates all weights. */
+
+@font-face {
+    font-family: "Noto Sans";
+    font-style: normal;
+    font-weight: 100 900;
+    src: url(fonts/NotoSans-400.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: "Noto Sans";
+    font-style: italic;
+    font-weight: 100 900;
+    src: url(fonts/NotoSans-400-Italic.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: "JetBrainsMono NF";
+    font-style: normal;
+    font-weight: 400;
+    src: url(fonts/JetBrainsMonoNerdFontMono-Regular.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: "JetBrainsMono NF";
+    font-style: normal;
+    font-weight: 700;
+    src: url(fonts/JetBrainsMonoNerdFontMono-Bold.woff2) format("woff2");
+}
+
+/* ----- 1. Tokens ------------------------------------------------------------- */
+:root {
+    /* Palette: plum ink, muted iris accent, lilac-tinted paper */
+    --r-background-color: #faf9fc;
+    --r-main-color: #3d3754;
+    --r-heading-color: #2f2a45;
+    --r-link-color: #6f5b92;
+    --r-link-color-hover: #5a4878;
+    --r-selection-color: #faf9fc;
+    --r-selection-background-color: #6f5b92;
+
+    /* Type: prose deck, so smaller than the 42px `simple` default */
+    --r-main-font-size: 36px;
+    --r-main-font:
+        "Noto Sans", "Avenir Next", "Helvetica Neue", Helvetica, sans-serif;
+    --r-heading-font: var(--r-main-font);
+    --r-heading-text-transform: none;
+    --r-heading-font-weight: 700;
+    --r-heading-letter-spacing: -0.015em;
+
+    --r-code-font: "JetBrainsMono NF", "SF Mono", Menlo, monospace;
+}
+
+/* ----- 2. Title slide --------------------------------------------------------- */
+/* <section class="title"> with h1, then p.byline > span.author > a */
+
+.reveal .title {
+    text-align: left;
+}
+
+.reveal .title h1 {
+    font-size: 2.1em;
+    line-height: 1.08;
+    margin: 0 0 0.55em;
+}
+
+.reveal .title .byline {
+    font-size: 0.55em;
+    line-height: 1.5;
+    color: rgba(61, 55, 84, 0.78);
+}
+
+.reveal .title .byline a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(111, 91, 146, 0.45);
+}
+
+/* ----- 3. Section slides -------------------------------------------------------- */
+/* Each `== Heading` becomes <section> with an h2 and .slide-content wrapper */
+
+.reveal h2 {
+    font-size: 1.55em;
+    line-height: 1.12;
+    margin: 0 0 0.9em;
+}
+
+.reveal .slide-content {
+    width: 88%;
+}
+
+.reveal .slide-content p {
+    line-height: 1.55;
+}
+
+/* ----- 4. AsciiDoc blocks -------------------------------------------------------- */
+/* The "Massive Theft" slide: <div class="quoteblock"><blockquote><p>…</p>
+   </blockquote><div class="attribution"><cite>…</cite></div></div>
+   Standard Asciidoctor quoteblock: left rule, italic, indented; the
+   attribution sits right-aligned under the quote. Full width, no box. */
+
+.reveal .quoteblock {
+    text-align: left;
+}
+
+.reveal .quoteblock blockquote {
+    font-size: 1.15em;
+    line-height: 1.55;
+    font-style: italic;
+    width: 100%;
+    margin: 0;
+    padding: 0 0 0 1.2em;
+    border-left: 3px solid rgba(111, 91, 146, 0.85);
+    background: none;
+    box-shadow: none;
+}
+
+.reveal .quoteblock blockquote p {
+    margin: 0;
+}
+
+.reveal .quoteblock .attribution {
+    margin-top: 1em;
+    text-align: right;
+    font-size: 0.5em;
+    font-style: normal;
+    letter-spacing: 0.03em;
+    color: rgba(61, 55, 84, 0.8);
+}
