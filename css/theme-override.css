@@ -102,7 +102,7 @@
    of the slide no matter how much (or little) body content follows. The
    section spans the full slide height, so reveal.js's content-height-based
    vertical centering resolves to top: 0, and the flex column keeps the h2
-   first with the body flowing beneath it.
+   first with the body vertically centered beneath it.
 
    Scoped to non-title sections and non-print mode: reveal.js hides
    non-present sections with `display: none` (so `display: flex` is only
@@ -128,9 +128,14 @@ html:not(.reveal-print) .reveal .slides > section.present:not(.title) {
     margin: 0 0 0.9em;
 }
 
+/* Auto top/bottom margins center the body in the space the pinned header
+   leaves behind — and resolve to zero when the body is taller than that
+   space, so overflowing content stays put instead of being clipped. */
+
 .reveal .slide-content {
-    flex: 1 1 auto;
+    flex: 0 1 auto;
     width: 88%;
+    margin: auto 0;
 }
 
 .reveal .slide-content p {
