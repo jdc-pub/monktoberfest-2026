@@ -15,6 +15,7 @@ Joey Carpinelli <joey@carpinelli.email>
 * This is my first time attending the Monktoberfest.
 * I want to talk about how we, as technologists, interact with other fields.
 * And specifically, I want to talk about how we interact with creatives.
+* I've been thinking about this for the last couple years at least.
 --
 
 == One Path to Technologist
@@ -109,7 +110,7 @@ CREATIVE:: A person who contributes to the development or proliferation of creat
 * Some months later I asked if anyone else had found their enemy; they said _yes! Katy's enemy is the Laramie Wizard!_
 --
 
-== Meet the Laramie Wizard
+== The Laramie Wizard!
 
 [.notes]
 --
@@ -117,18 +118,27 @@ CREATIVE:: A person who contributes to the development or proliferation of creat
 * I like to call them _professional noticers_.
 --
 
-== Creatives
+== Creatives Hate Us
 
 // GOAL: explain why creatives hate us
 
 [.notes]
 --
+* Creatives — straight up — hate us.
+* I think most of us will be unsurprised to hear that.'
+* We stole their work.
+* We implied that they were replaceable.
+* We have failed to build tools for them.
+* As I said earlier, I had been thinking about this talk for a while, and I knew I wanted to talk about how AI company executives _implied_ that artists were replaceable.
+* We don't have to spend a lot of time on that, though, because they didn't just imply it: they _said_ it explicitly.
+
 --
 
-== Theft
+== "An Astonishing Theft"
 
 // https://storage.courtlistener.com/recap/gov.uscourts.nysd.640396/gov.uscourts.nysd.640396.1977.1.pdf
 [quote, "News Plaintiffs' Combined Summary Judgment Brief"]
 --
 an astonishing theft of unprecedented proportions
 --
+
