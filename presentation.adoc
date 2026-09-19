@@ -1,0 +1,58 @@
+= What Technologists Owe Creatives
+Joey Carpinelli <joseph.carpinelli@icloud.com>
+:imagesdir: ../img
+:revealjs_theme: simple
+:revealjs_transition: none
+:revealjsdir: ../node_modules/reveal.js
+:customcss: ../css/theme-override.css
+
+
+// GOAL: introduce the talk
+
+[.notes]
+--
+--
+
+== Technologists
+
+// GOAL: introduce myself; introduce and define the term "technologist"
+
+[.notes]
+--
+--
+
+
+
+== Creatives
+
+// GOAL: introduce my connections to creatives; introduce and define the term "creative"
+
+[.notes]
+--
+--
+
+== Creatives
+
+// GOAL: explain creatives are special
+
+[.notes]
+--
+--
+
+== Creatives
+
+// GOAL: explain why creatives hate us
+
+[.notes]
+--
+--
+
+== "Massive Theft"
+
+// https://storage.courtlistener.com/recap/gov.uscourts.nysd.640396/gov.uscourts.nysd.640396.1977.1.pdf
+[quote, News Plaintiffs\' Combined Summary Judgment Brief, p.9]
+--
+This case is about, as Microsoft’s Director of Applied Science put it, “an astonishing theft
+of unprecedented proportions”; SF1437, perhaps the “largest theft of labor in human history.”
+SF1652.
+--
