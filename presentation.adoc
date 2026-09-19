@@ -1,27 +1,84 @@
 = What Technologists +++<br>+++ Owe Creatives
-Joey Carpinelli <joseph.carpinelli@icloud.com>
+Joey Carpinelli <joey@carpinelli.email>
 :imagesdir: ../img
 :revealjs_theme: simple
+:revealjs_slideNumber: c/t
 :revealjs_transition: none
 :revealjsdir: ../node_modules/reveal.js
 :customcss: ../css/theme-override.css
-
 
 // GOAL: introduce the talk
 
 [.notes]
 --
+* I am so thankful to be giving this talk here.
+* This is my first time attending the Monktoberfest.
+* I want to talk about how we, as technologists, interact with other fields.
+* And specifically, I want to talk about how we interact with creatives.
 --
 
-== Technologists
+== One Path to Technologist
 
-// GOAL: introduce myself; introduce and define the term "technologist"
+// GOAL: introduce myself
 
 [.notes]
 --
+* I say _we_ because like most of you, I consider myself to be a technologist.
+* I studied electrical engineering in college, and quickly found myself interested in building software for space systems.
+* _Space is cool!_
+* Thanks to a lot of privilege and luck, and thanks to my ability to apply Fourier transforms, I was accepted into a rotational internship program at NASA, and ultimately hired as a full-time integrated systems engineer .
+* (This picture is me, one pandemic and a couple years younger, sitting on a space toilet on a tour.)
+* Today, I work as a systems software engineer at the Robotics & AI Institute near Boston; I build tools for interacting with robot hardware.
+* In my career so far, I've built technologies, so I do consider myself a technologist, but it's still somewhat unclear to me what a technologist is.
 --
 
+== An Aside: Technologist or Engineer?
 
+// GOAL: present a short anecdote that highlights the ambiguity around the word *technologist*.
+
+image:ast-job-posting.png['A job posting on USAJobs which reads: "AST — Aerospace Flight Systems (Direct-Hire)"']
+
+[.notes]
+--
+* The first time I was aware of the word _technologist_ was in my first-ever pay stub as a full-time employee.
+* I was excited to have started working as a full-time engineer, but when I checked my pay-stub, it read _Aerospace Technologist_; what the hell?
+* Apparently, your pay stub would read _Engineer_ only if you're credentialed as a _Professional Engineer_.
+--
+
+== What is a Technologist?
+
+[.notes]
+--
+* So what _is_ a technologist?
+* The definition is actually really difficult to find!
+* The Wikipedia page is mostly empty; the Wiktionary says "A scientist, engineer, or technician who specializes in a particular technology, or who uses technology in a particular field."
+--
+
+image:wikipedia-technologist.png["A screenshot of the Wikipedia page for technologist that reads: 'This page is a primary topic and an article should be written about it. One or more editors believe it holds the title of a broad-concept article. The article may be written here or drafted elsewhere first. Related titles should be described here, while unrelated titles should be moved to Technologist (disambiguation). Relevant discussion may be found on the talk page.'"]
+
+== Definition of Technologist
+
+[.notes]
+--
+* Over time, I've grown to really love the term _technologist_ because it get's to *what* we do much more effectively than _engineer_.
+* For the purposes of this presentation, a technologist is someone who does at least one of two things: helps to develop technology, or helps to spread the use of technology.
+* I include scientists, engineers, researchers, people operations departments, and more.
+--
+
+TECHNOLOGIST:: A person who contributes to the development or proliferation of emerging technologies.
+
+== Definition of Creative
+
+// GOAL: define the term "creative"
+
+[.notes]
+--
+* The word _creative_ as a noun doesn't even have a Wikipedia page!
+* I'm defining the term _creative_ similarly: someone who creates or distributes creative works.
+* I include journalists, marketers, artists, and writers.
+--
+
+CREATIVE:: A person who contributes to the development or proliferation of creative outputs.
 
 == Creatives
 
@@ -29,14 +86,35 @@ Joey Carpinelli <joseph.carpinelli@icloud.com>
 
 [.notes]
 --
+* I love creatives, some of them literally.
+* I other loved ones who are writers, animators, and filmmakers.
+* And my wife is a creative writer; we just got married in June.
+* I particularly love hanging around writers.
+* I got to know many of them while my wife was completing her MFA in Wyoming.
 --
 
-== Creatives
+== Cosmic Enemies in Laramie, WY
 
 // GOAL: explain creatives are special
 
 [.notes]
 --
+* Within a few weeks of her program starting, the graduating MFA class warned her that _everyone at the program has an enemy_.
+* Your enemy will reveal themselves at some point while you're completing your MFA.
+* They told her that, and she told me, and I think we both forgot about it for a couple weeks.
+* Casey was walking along the sidewalk, and encountered a small child playing with a toy lightsaber on the sidewalk.
+* When she got closer, she said _excuse me, can I please pass?_
+* The child drew his lightsaber, he screamed _nooo!_, and started swinging.
+* I got a frantic phone call: _is my enemy a literal child? How do I request a new enemy?_
+* Some months later I asked if anyone else had found their enemy; they said _yes! Katy's enemy is the Laramie Wizard!_
+--
+
+== Meet the Laramie Wizard
+
+[.notes]
+--
+* In everyday life, in class, at restaurants and bars, at home, they were creating _lore_.
+* I like to call them _professional noticers_.
 --
 
 == Creatives
@@ -47,12 +125,10 @@ Joey Carpinelli <joseph.carpinelli@icloud.com>
 --
 --
 
-== "Massive Theft"
+== Theft
 
 // https://storage.courtlistener.com/recap/gov.uscourts.nysd.640396/gov.uscourts.nysd.640396.1977.1.pdf
-[quote, News Plaintiffs\' Combined Summary Judgment Brief, p.9]
+[quote, "News Plaintiffs' Combined Summary Judgment Brief"]
 --
-This case is about, as Microsoft’s Director of Applied Science put it, “an astonishing theft
-of unprecedented proportions”; SF1437, perhaps the “largest theft of labor in human history.”
-SF1652.
+an astonishing theft of unprecedented proportions
 --
