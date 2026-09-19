@@ -171,3 +171,31 @@ html:not(.reveal-print) .reveal .slides > section.present:not(.title) {
     letter-spacing: 0.03em;
     color: rgba(61, 55, 84, 0.8);
 }
+
+/* Glossary definition lists: <div class="dlist"><dl><dt>term</dt>
+   <dd>definition</dd></dl></div>
+   No box — same language as the quote block: a left rule marks the term,
+   the term carries the accent, and the definition sits italic beneath. */
+
+.reveal .dlist {
+    margin: 0;
+    padding-left: 1.2em;
+    border-left: 3px solid rgba(111, 91, 146, 0.85);
+}
+
+.reveal .dlist dt {
+    font-weight: 700;
+    color: #6f5b92;
+    margin: 0;
+}
+
+.reveal .dlist dd {
+    font-style: italic;
+    line-height: 1.55;
+    margin: 0.15em 0 0;
+    color: rgba(61, 55, 84, 0.92);
+}
+
+.reveal .dlist dd p {
+    margin: 0;
+}
