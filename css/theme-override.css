@@ -98,13 +98,38 @@
 /* ----- 3. Section slides -------------------------------------------------------- */
 /* Each `== Heading` becomes <section> with an h2 and .slide-content wrapper */
 
+/* PowerPoint-style layout: the header sits at a fixed distance from the top
+   of the slide no matter how much (or little) body content follows. The
+   section spans the full slide height, so reveal.js's content-height-based
+   vertical centering resolves to top: 0, and the flex column keeps the h2
+   first with the body flowing beneath it.
+
+   Scoped to non-title sections and non-print mode: reveal.js hides
+   non-present sections with `display: none` (so `display: flex` is only
+   applied to `.present` slides), and its PDF renderer lays slides out
+   itself with `!important` overrides. */
+html:not(.reveal-print) .reveal .slides > section:not(.title) {
+    height: 100%;
+    box-sizing: border-box;
+    padding-top: 0.75em;
+    text-align: left;
+}
+
+html:not(.reveal-print) .reveal .slides > section.present:not(.title) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 .reveal h2 {
+    flex: 0 0 auto;
     font-size: 1.55em;
     line-height: 1.12;
     margin: 0 0 0.9em;
 }
 
 .reveal .slide-content {
+    flex: 1 1 auto;
     width: 88%;
 }
 
