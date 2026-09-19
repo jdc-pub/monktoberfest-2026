@@ -146,6 +146,19 @@ html:not(.reveal-print) .reveal .slides > section.present:not(.title) {
 }
 
 /* ----- 4. AsciiDoc blocks -------------------------------------------------------- */
+/* Slide number: reveal.js hard-codes it bottom-right; pin it bottom-left to
+   sit with the deck's left-aligned layout. Restyle to match the palette. */
+
+.reveal .slide-number {
+    right: auto;
+    left: 1em;
+    bottom: 0.6em;
+    color: rgba(61, 55, 84, 0.8);
+    background-color: transparent;
+    font-family: var(--r-main-font);
+    font-size: 15px;
+}
+
 /* The "Massive Theft" slide: <div class="quoteblock"><blockquote><p>…</p>
    </blockquote><div class="attribution"><cite>…</cite></div></div>
    Standard Asciidoctor quoteblock: left rule, italic, indented; the
