@@ -13,6 +13,7 @@
      1. Tokens  — reveal.js `--r-*` variables drive most of the look
      2. Title slide
      3. Section slides
+     3b. Section divider slides
      4. AsciiDoc blocks
    ========================================================================== */
 
@@ -108,7 +109,7 @@
    non-present sections with `display: none` (so `display: flex` is only
    applied to `.present` slides), and its PDF renderer lays slides out
    itself with `!important` overrides. */
-html:not(.reveal-print) .reveal .slides > section:not(.title) {
+html:not(.reveal-print) .reveal .slides > section:not(.title):not(.divider) {
     height: 100%;
     box-sizing: border-box;
     padding-top: 0.75em;
@@ -116,7 +117,10 @@ html:not(.reveal-print) .reveal .slides > section:not(.title) {
     text-align: left;
 }
 
-html:not(.reveal-print) .reveal .slides > section.present:not(.title) {
+html:not(.reveal-print)
+    .reveal
+    .slides
+    > section.present:not(.title):not(.divider) {
     display: flex !important;
     flex-direction: column;
     align-items: flex-start;
@@ -143,6 +147,33 @@ html:not(.reveal-print) .reveal .slides > section.present:not(.title) {
 
 .reveal .slide-content p {
     line-height: 1.55;
+}
+
+/* ----- 3b. Section divider slides -------------------------------------------- */
+/* [.divider] sections are part breaks: a huge, vertically centered h2
+   underlined by a full-width accent rule — the same rule language as the
+   quote and definition blocks, but horizontal. Title-only sections emit no
+   .slide-content wrapper, so the flex column centers the h2 directly. */
+
+html:not(.reveal-print) .reveal .slides > section.present.divider {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.reveal .slides > section.divider h2 {
+    font-size: 2.4em;
+    line-height: 1.15;
+    margin: 0;
+    align-self: stretch; /* full slide width, so the rule below spans all of it */
+}
+
+.reveal .slides > section.divider h2::after {
+    content: "";
+    display: block;
+    margin-top: 0.5em;
+    border-top: 3px solid rgba(111, 91, 146, 0.85);
 }
 
 /* ----- 4. AsciiDoc blocks -------------------------------------------------------- */
