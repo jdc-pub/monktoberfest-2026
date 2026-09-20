@@ -1,0 +1,36 @@
+= What Technologists Owe Creatives
+Joey Carpinelli <joseph.carpinelli@icloud.com>
+
+. Introduce myself, my wife.
+. Casey's complaints about the industry.
+. The macro harms that our field has done, implicitly and explicitly.
+. We should repair relationship with creatives.
+. Here's how: micro opportunities for mending our relationship with creatives.
+. Charming stories of Casey et al.
+. If you can do something wonderful then you should.
+. Thank you.
+
+. Destroying of the books.
+. I view this as artists give to us, and we give back to artists, and the cycle continues.
+. We should advocate for changing the laws.
+. Execs acknowledge that we need both in this feedback loop.
+. Interstellar (science and humanities are intertwined, science can live inside art to help tell story)
+. You have to be imaginitive to use technology for good.
+. End on note of if you _can_ do something wonderful then you should.
+. I think that if you want to use technology for good, you have to have imagination.
+. Repair relationship with those who inspire us.
+. Feedback loop.
+. Creatives imagine new expressions of humanity, and technologists materialize those expressions.
+. Creatives notice things that others don't.
+. Creatives help you explore humanity more effectively.
+
+= Reverse Outline
+Bryan Cantrill
+
+. Introducing the origin of the talk.
+. Definitions of principles and values.
+. Good examples of principles and values: history, then older companies, then more recent companies.
+. Bad examples of principles and values from recent companies.
+. More explicit and personal examples of poorly demonstrated values and principles.
+. Emphasizes technologists have a role to play, we owe society.
+. We bear responsibility to society.
