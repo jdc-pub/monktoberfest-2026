@@ -26,6 +26,7 @@ Joey Carpinelli <joey@carpinelli.email>
 --
 * I say _we_ because like most of you, I consider myself to be a technologist.
 * I studied electrical engineering in college, and quickly found myself interested in building software for space systems.
+* Part of the reason I like space is because of creatives presenting the mystery of space in such interesting ways.
 * _Space is cool!_
 * Thanks to a lot of privilege and luck, and thanks to my ability to apply Fourier transforms, I was accepted into a rotational internship program at NASA, and ultimately hired as a full-time integrated systems engineer .
 * (This picture is me, one pandemic and a couple years younger, sitting on a space toilet on a tour.)
@@ -55,7 +56,10 @@ image:ast-job-posting.png['A job posting on USAJobs which reads: "AST — Aerosp
 * The Wikipedia page is mostly empty; the Wiktionary says "A scientist, engineer, or technician who specializes in a particular technology, or who uses technology in a particular field."
 --
 
-image:wikipedia-technologist.png["A screenshot of the Wikipedia page for technologist that reads: 'This page is a primary topic and an article should be written about it. One or more editors believe it holds the title of a broad-concept article. The article may be written here or drafted elsewhere first. Related titles should be described here, while unrelated titles should be moved to Technologist (disambiguation). Relevant discussion may be found on the talk page.'"]
+// Full multi-sentence alt text lives in this attribute entry; the macro line stays readable.
+:alt-img-technologist: A screenshot of the Wikipedia page for technologist that reads: 'This page is a primary topic and an article should be written about it. One or more editors believe it holds the title of a broad-concept article. The article may be written here or drafted elsewhere first. Related titles should be described here, while unrelated titles should be moved to Technologist (disambiguation). Relevant discussion may be found on the talk page.'
+
+image:wikipedia-technologist.png["{alt-img-technologist}"]
 
 == Definition of Technologist
 
@@ -118,14 +122,16 @@ CREATIVE:: A person who contributes to the development or proliferation of creat
 * I like to call them _professional noticers_.
 --
 
-== Creatives Hate Us
+== Technologists vs. Creatives
+
+//
 
 // GOAL: explain why creatives hate us
 
 [.notes]
 --
 * Creatives — straight up — hate us.
-* I think most of us will be unsurprised to hear that.'
+* I think most of us will be unsurprised to hear that.
 * We stole their work.
 * We implied that they were replaceable.
 * We have failed to build tools for them.
@@ -134,11 +140,25 @@ CREATIVE:: A person who contributes to the development or proliferation of creat
 
 --
 
-== "An Astonishing Theft"
+// writing strike
+// despite that, Netflix has used AI in 300 titles this year
+//
+
+== Theft
 
 // https://storage.courtlistener.com/recap/gov.uscourts.nysd.640396/gov.uscourts.nysd.640396.1977.1.pdf
-[quote, "News Plaintiffs' Combined Summary Judgment Brief"]
+
+[quote, "Microsoft's Director of Applied Science"]
 --
-an astonishing theft of unprecedented proportions
+millions of people around the world will soon consider large models 'hoovering up' all their work to be an astonishing theft of unprecedented proportions
 --
 
+[quote, "OpenAI's Head of ChatGPT"]
+--
+OpenAI’s Head of ChatGPT wrote that “[p]ublishers” face an “existential threat” from those products, SF1466, which, he said, “are largely substitutive, period” and “will get more and more substitutive as they get better.”
+--
+
+
+== An Aside: Nerd Sniping
+
+image:https://imgs.xkcd.com/comics/nerd_sniping.png['An XKCD comic on "Nerd Sniping".']
