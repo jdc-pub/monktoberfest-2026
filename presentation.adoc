@@ -6,3 +6,29 @@ Joey Carpinelli <joey@carpinelli.email>
 :revealjs_transition: none
 :revealjsdir: ../node_modules/reveal.js
 :customcss: ../css/theme-override.css
+
+[.notes]
+--
+* I'm so excited to be here, this is my first time attending the Monktoberfest.
+* I want to talk about how we as technologists should behave towards creatives.
+* This is something I've thought a lot about recently; my wife Casey and I just got married in June, and she's a creative writer.
+* The technology industry has changed a *lot* throughout our relationship.
+* When ChatGPT was first released, Casey was in the middle of her MFA program.
+* As I got to know her, and then her colleagues, I saw first-hand a lot of reactions to AI company statements.
+* They have some complaints, and I want to share some of those now.
+--
+
+== Technologists and Creatives
+
+[.notes]
+--
+* We are connected!
+--
+
+== Threats to Creatives
+
+[.notes]
+--
+
+--
+
