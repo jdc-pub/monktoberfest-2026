@@ -6,3 +6,208 @@ Joey Carpinelli <joey@carpinelli.email>
 :revealjs_transition: none
 :revealjsdir: ../node_modules/reveal.js
 :customcss: ../css/theme-override.css
+
+[.notes]
+--
+- Thank you! I'm so excited to be here, this is my first time attending the Monktoberfest.
+- I want to talk about how we as technologists affect one sliver of society: _creatives_.
+- By _creatives_, I'm including visual artists, musicians, creative professionals i.e. marketers, and writers.
+- I'll be spending most of my time talking about creative writers, partially because in this last June, I got married to one.
+--
+
+[.divider]
+== Creatives
+
+[.notes]
+--
+- My wife, Casey, is a creative writer.
+- I met her six years ago on Saturday.
+- In that time I've met and grown close with a lot of creative writers.
+- As publicly accessible language models' capabilities advanced, they had complaints.
+- I heard those complaints, and for the next few minutes, I want to _safely_ radiate those complaints back out to you.
+- Unfortunately, the most effective way to share their concerns (in my opinion) is chronologically...
+--
+
+== 2021: GPT-2 / GPT-3
+
+_When language models were *cute*._
+
+[.notes]
+--
+- ...and that means that for the next minute or two I have to share snippets of my relationship with my wife alongside ChatGPT releases.
+- That sucks.
+- But I think it's important, because six years ago language models were cute.
+- I was a graduate student studying aerospace software, and so I had a university email, and got a private-access OpenAI key for GPT-2.
+- I set up an interactive (Pluto) notebook with a prompt, something like: _write a screenplay that's Les Miserables but instead of 19th century revolutionary France, set it in 20th century Italian American NYC._
+- Like the Sopranos, that kind of thing, but Les Miserables.
+- It could kind of do it!
+- No one I talked to was intimidated by this; this was _cute_.
+- People were kind of impressed that a computer program was able to spit this out, but not even _that_ impressed.
+- We'd had Siri for like 10 years.
+--
+
+== 2022: ChatGPT
+
+_Less cute._
+
+[.notes]
+--
+- A year later, Casey and I were long-distance: she was in her MFA program, and I was working as an aerospace _technologist_ at the NASA center in Houston.
+- (I later learned that you were called a _technologist_ if you didn't have a Professional Engineering certification.)
+- I was locked out of ChatGPT due to changing my email too many times.
+- Casey's colleagues saw an _explosion_ in the use of ChatGPT for undergraduate students.
+- There were no tools to reliably check for plagiarism, so professors were largely left to fend for themselves.
+- Sentiment never recovered.
+--
+
+[.divider]
+== Criticisms
+
+[.notes]
+--
+- Societal conversations about the technology and how it was created.
+--
+
+== Theft for Model Training
+
+[.notes]
+--
+- Lawsuits.
+--
+
+== Advertising Substitutes for Artists
+
+[.notes]
+--
+- Models advertised as matching capabilities of artists.
+--
+
+== Destructive Book Scanning
+
+[.notes]
+--
+- Artists furious.
+- Tech industry's response was unhelpful.
+- Lay out facts and options.
+--
+
+// TODO need a slide motivating why reconnecting with creatives is good?
+
+== Moving Forward with Creatives
+
+[.notes]
+--
+- As has been discussed before, we have a responsibility to society.
+- That includes creatives!
+- When... we should...
+- Change laws, etc.
+- Changing law as impediment rings hallow when we just finished stealing all of the world's information.
+- I'm not at the point in my career where I am qualified to make organizational decisions.
+- I frequently make technical decisions for organizations, but not yet structural decisions.
+- So we have this problem: the technology industry repeatedly punched creatives in the face and completely decimated any trust we had left after 2016.
+--
+
+[.divider]
+== Technical Solutions
+
+_...to societal problems!_
+
+[.notes]
+--
+- I'll make a classic mistake: propose new software to solve social problems.
+- I've noticed a lot of the tools that writers use are lacking.
+- They think so too; I've watched them work and they need new tools.
+- Many of them pay annual subscriptions to Microsoft Word, and they're not happy about that.
+--
+
+== Nerd Sniping
+
+[.notes]
+--
+-
+--
+
+== Version Control
+
+[.notes]
+--
+- Casey lost work.
+- She Googled and found the Program Files folder, and filenames that _looked_ like her document with strange file extensions.
+- Opening them one by one in Text Edit, she saw they were document snapshots, and she was able to copy the lost paragraphs.
+- This is insane and should never happen.
+- I almost never lose work, and when I do its my fault.
+- We should offer our version control tools, wrapped in a nice box, for writers.
+- See code.storage API.
+--
+
+== Citations and Formatting
+
+[.notes]
+--
+- Writers still manually apply formatting and manually write citations.
+- This is insane!
+- We should offer BibTeX and CSL, wrapped in a nice box, for writers.
+--
+
+== Word Processing
+
+[.notes]
+--
+- All of this would fit well within a nice, free and open-source word processor.
+- After 30 years, I think word processors with Microsoft Word's caliber should be free.
+- Formatting should be separate from content.
+--
+
+== Constraints
+
+[.notes]
+--
+- No AI.
+- Listen to creatives: what do they actually need?
+- I proposed syntax trees for prose to Casey: _what the fuck are you talking about?_
+- We fixed the gas leak.
+--
+
+[.divider]
+== For Creatives
+
+[.notes]
+--
+- The technology industry produced AI in such a way that it has original sins that writers may never forgive.
+- Mending that relationship is important because we do have an obligation to behave responsibly in society, and treat people well.
+- Still, there's another motivation: creatives are generally wonderful people.
+--
+
+== Finding Your Enemy
+
+[.notes]
+--
+- Tell story about Casey's enemy.
+- Close with Laramie wizard.
+- They were writing _lore_ and didn't seem to notice it.
+- I like to call them professional noticers.
+--
+
+[.divider]
+== For Technologists
+
+[.notes]
+--
+- Of course, we can also be motivated by our own enlightened self interest.
+- Creatives imagine, and technologists actualize that imagination.
+--
+
+== Case: Interstellar
+
+[.notes]
+--
+- When creating a detailed simulation for the movie, scientists did science!
+--
+
+[.divider]
+== Conclusions
+
+[.notes]
+--
+- In the words of Robert Zubrin: if we can do something wonderful, then we should.
+--
