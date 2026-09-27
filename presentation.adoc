@@ -7,25 +7,6 @@ Joey Carpinelli <joey@carpinelli.email>
 :revealjsdir: ../node_modules/reveal.js
 :customcss: ../css/theme-override.css
 
-// I understand the odds of a slot still being available are vanishingly small!
-// Thanks for your consideration regardless.
-// As someone who's been employed as a full-time engineer for just five years, I recently discovered Monktoberfest.
-// I believe it fits with the following talk description, which I've been thinking about for the last year.
-// Please note: I am employed at the Robotics & AI Institute, but I am submitting this talk proposal in a personal capacity.
-//
-// My wife is a creative writer, and so I've been privileged to have a front-row seat to how artists (creatives) have experienced technology in the last several years.
-// I don't think any technologist will be surprised when I say that rage and exasperation were two of the overwhelming emotions expressed by creatives, with respect to technology.
-// Their work has been loudly stolen for training language models.
-// Precious artifacts of their field such as rare books, due to quirks of law and misaligned actors, have been destroyed en masse.
-// And their tools, which are often owned by technologists, have dramatically lagged in capabilities.
-// Why is it that technical writers have BibTeX and CSL, but writers in the humanities still manually format citations? I have changed code editors several times in the last ten years, but creative writers still overwhelmingly use Microsoft Word.
-// My text has precise and robust version control, but my wife still has to search online in desperation to recover 1000 lost words after her word processor crashes.
-//
-// The crux of my proposed talk is this: as has been discussed in Monktoberfest before, technologists are a part of society and we therefore have an obligation to society; this obligation extends particularly to creatives, and our field has been failing that obligation.
-// We have an opportunity to vastly improve the tools with which (many) artists create.
-// I would like to discuss concrete opportunities where I believe technologies we have today can be directly applied to benefit creatives: version control, word processing, and work submission processing.
-// To paraphrase another technologist (Robert Zubrin, in a very different context): if we have the opportunity to do something wonderful, then we should take it.
-
 [.notes]
 --
 - Thank you! I'm so excited to be here, this is my first time attending the Monktoberfest.
