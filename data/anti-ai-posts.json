@@ -1,32 +1,172 @@
 {
   "posts": [
-    { "url": "https://bsky.app/profile/authorsguild.org/post/3lktctiu6522m" },
     {
-      "url": "https://bsky.app/profile/3dfrost.bsky.social/post/3ma5ao4kdgk2h"
+      "url": "https://bsky.app/profile/authorsguild.org/post/3lktctiu6522m",
+      "author": {
+        "handle": "authorsguild.org",
+        "displayName": "The Authors Guild",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:s27ncqkkjfu7mxgell57fpnz/bafkreie4tkbxhtlo6x3ru32lemxsixewbbkfqtfb6kk5r2cnwb2mpp5rdy"
+      },
+      "date": "Mar 20, 2025",
+      "text": "It is high time AI companies were held accountable for their egregious theft of authors' works. AI companies must pay authors for the past uses -- and going forward they must engage in licensing.",
+      "likes": 18,
+      "reposts": 10
     },
     {
-      "url": "https://bsky.app/profile/mollyjongfast.bsky.social/post/3m35zf2w3ps2j"
-    },
-    { "url": "https://bsky.app/profile/masnick.com/post/3l32cyuxizk2o" },
-    { "url": "https://bsky.app/profile/404media.co/post/3mm2ivguvq22x" },
-    {
-      "url": "https://bsky.app/profile/scumbelievable.bsky.social/post/3mecsr6gi622y"
-    },
-    {
-      "url": "https://bsky.app/profile/scumbelievable.bsky.social/post/3lgqkg5fpsc2v"
-    },
-    {
-      "url": "https://bsky.app/profile/jpbrammer.bsky.social/post/3lgwgacb54k2i"
+      "url": "https://bsky.app/profile/3dfrost.bsky.social/post/3ma5ao4kdgk2h",
+      "author": {
+        "handle": "3dfrost.bsky.social",
+        "displayName": "Frost || 3D Models & Reviews",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:6ddbcd2sse6pjgnujuhldkdw/bafkreibdenl7ln27ingpuqaq25mwquvb5xhpn55egebx5cj3p5pnqcdv74"
+      },
+      "date": "Dec 16, 2025",
+      "text": "I don't want gen AI in my browser\nI don't want gen AI in my pc\nI don't want gen AI in my art\nI don't want gen AI in my games\nI don't want gen AI in my music\nI don't want gen AI in my movies\nI don't want gen AI in my books\nI don't want gen AI in my cart\nI don't want gen AI in my life",
+      "likes": 24413,
+      "reposts": 11482
     },
     {
-      "url": "https://bsky.app/profile/notalawyer.bsky.social/post/3mwe5juj4jk22"
+      "url": "https://bsky.app/profile/mollyjongfast.bsky.social/post/3m35zf2w3ps2j",
+      "author": {
+        "handle": "mollyjongfast.bsky.social",
+        "displayName": "Molly Jong-Fast",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:oqr5mp25r7z3vfr3igeerxbw/bafkreidw26fqs7xm6l5medgkcfqhoz4wpueqbuirgw2shvc2ujb6qyt5ma"
+      },
+      "date": "Oct 14, 2025",
+      "text": "Can I use AI to block AI?",
+      "likes": 1561,
+      "reposts": 117
     },
     {
-      "url": "https://bsky.app/profile/scumbelievable.bsky.social/post/3me7gxmndak2g"
+      "url": "https://bsky.app/profile/masnick.com/post/3l32cyuxizk2o",
+      "author": {
+        "handle": "masnick.com",
+        "displayName": "Mike Masnick",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:cak4klqoj3bqgk5rj6b4f5do/bafkreifrr5n5p2ixfbupo3eocykh5jzd67dy2tohi7pzllacainjgkkq5e"
+      },
+      "date": "Aug 31, 2024",
+      "text": "Kid has an English assignment, where school has kids first submit essay to an \"AI checker.\" Kid did not use AI. AI checker says the use of the word \"devoid\" magically turned essay into 18% AI written. Changing \"devoid\" makes it drop to 0%. We're spending time \"un-AI-ing\" an essay that has no AI.",
+      "likes": 4249,
+      "reposts": 1051
     },
-    { "url": "https://bsky.app/profile/gabino.bsky.social/post/3lfznh72fvc2u" },
-    { "url": "https://bsky.app/profile/gabino.bsky.social/post/3liwvyehpn225" },
-    { "url": "https://bsky.app/profile/maris.bsky.social/post/3k45dh7dnhx23" },
-    { "url": "https://bsky.app/profile/maris.bsky.social/post/3mvd5ucmdsk2c" }
+    {
+      "url": "https://bsky.app/profile/404media.co/post/3mm2ivguvq22x",
+      "author": {
+        "handle": "404media.co",
+        "displayName": "404 Media",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:vcepp6trx4vpe5ourxso4tjl/bafkreiee23yjug2vlf3b3dj6lws32iqoug3jd6y5ciwvgo5qf2rc2wgfli"
+      },
+      "date": "May 17, 2026",
+      "text": "Former Google CEO Eric Schmidt was booed throughout this commencement speech at the University of Arizona for his praise of AI. This comes just a week after another commencement speaker who mentioned AI was booed at a school in Florida.\n\nRead more: www.404media.co/ucf-ai-comme...",
+      "likes": 12950,
+      "reposts": 3327
+    },
+    {
+      "url": "https://bsky.app/profile/scumbelievable.bsky.social/post/3mecsr6gi622y",
+      "author": {
+        "handle": "scumbelievable.bsky.social",
+        "displayName": "Gretchen Felker-Martin PRE ORDER CHIMERA 2.16.27 🍉",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:yv4g3qpmt6god5zaiqwsu3uq/bafkreiegjzfgcms3de3gyvwn7htcewiznivzjeparnbzjrjzyvglglnyke"
+      },
+      "date": "Feb 8, 2026",
+      "text": "My white-hot rage at seeing that the AI Summary dropdown in Gmail is now automatic can hardly be described.",
+      "likes": 313,
+      "reposts": 14
+    },
+    {
+      "url": "https://bsky.app/profile/scumbelievable.bsky.social/post/3lgqkg5fpsc2v",
+      "author": {
+        "handle": "scumbelievable.bsky.social",
+        "displayName": "Gretchen Felker-Martin PRE ORDER CHIMERA 2.16.27 🍉",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:yv4g3qpmt6god5zaiqwsu3uq/bafkreiegjzfgcms3de3gyvwn7htcewiznivzjeparnbzjrjzyvglglnyke"
+      },
+      "date": "Jan 27, 2025",
+      "text": "suck it, AI dorks",
+      "likes": 204,
+      "reposts": 12
+    },
+    {
+      "url": "https://bsky.app/profile/jpbrammer.bsky.social/post/3lgwgacb54k2i",
+      "author": {
+        "handle": "jpbrammer.bsky.social",
+        "displayName": "JP",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:tds6tm2gzx5zva6gyfhtdmsp/bafkreieiqte5wmf3wqrtwkvfc22wrk2uleau5zft7bppdgoostberbyvey"
+      },
+      "date": "Jan 30, 2025",
+      "text": "I had a vision of humanity becoming too reliant on AI art, forgetting multiple techniques, and undergoing a technological collapse, thus returning us to an era of drawing those fucked up medieval cats",
+      "likes": 1194,
+      "reposts": 153
+    },
+    {
+      "url": "https://bsky.app/profile/notalawyer.bsky.social/post/3mwe5juj4jk22",
+      "author": {
+        "handle": "notalawyer.bsky.social",
+        "displayName": "Peter",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:2xzjzuyrgz6dmjy2xdhlawgl/bafkreieuxjz7ojhrhugi7stfayeur2zdlyxes7ehmhcgsk5txmdwqaauoe"
+      },
+      "date": "Sep 25, 2026",
+      "text": "i really can’t bring myself to care about AI anthropomorphism debates. “is AI thinking?” i don’t know. is a calculator calculating? questions for the philosophers. what’s important is that we put sam altman in prison.",
+      "likes": 7627,
+      "reposts": 1340
+    },
+    {
+      "url": "https://bsky.app/profile/scumbelievable.bsky.social/post/3me7gxmndak2g",
+      "author": {
+        "handle": "scumbelievable.bsky.social",
+        "displayName": "Gretchen Felker-Martin PRE ORDER CHIMERA 2.16.27 🍉",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:yv4g3qpmt6god5zaiqwsu3uq/bafkreiegjzfgcms3de3gyvwn7htcewiznivzjeparnbzjrjzyvglglnyke"
+      },
+      "date": "Feb 6, 2026",
+      "text": "Every instance of \"AI democratizes the arts, you're classist and ableist and a gatekeeper for trying to stop it\" is a slap in the face to the literally centuries of poor, disabled people making art on the margins and a crass lie in service of a machine that strips down and regurgitates dreams",
+      "likes": 8923,
+      "reposts": 3000
+    },
+    {
+      "url": "https://bsky.app/profile/gabino.bsky.social/post/3lfznh72fvc2u",
+      "author": {
+        "handle": "gabino.bsky.social",
+        "displayName": "Gabino Iglesias",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:blxykzzlsjqc5pxtpux6ogvc/bafkreiadrc2e7incg7v2pzv37hj3bt4tcbe6t7charmrwmvahusxwa24gi"
+      },
+      "date": "Jan 18, 2025",
+      "text": "AI defenders said it was just “help” and they were rewriting everything. Now AI bullshit (I don’t call them books) are showing up with AI notes. Why? Because the AI defenders are lazy (we knew that) and they were lying (we also knew that). Imagine wanting to be a writer and hating the writing part…",
+      "likes": 204,
+      "reposts": 20
+    },
+    {
+      "url": "https://bsky.app/profile/gabino.bsky.social/post/3liwvyehpn225",
+      "author": {
+        "handle": "gabino.bsky.social",
+        "displayName": "Gabino Iglesias",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:blxykzzlsjqc5pxtpux6ogvc/bafkreiadrc2e7incg7v2pzv37hj3bt4tcbe6t7charmrwmvahusxwa24gi"
+      },
+      "date": "Feb 24, 2025",
+      "text": "Laughing at folks who have “writer” or “author” in their bio and follow AI “writing” apps.",
+      "likes": 103,
+      "reposts": 3
+    },
+    {
+      "url": "https://bsky.app/profile/maris.bsky.social/post/3k45dh7dnhx23",
+      "author": {
+        "handle": "maris.bsky.social",
+        "displayName": "Maris Kreizman",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:dna3c6dbiajizvm2aionxled/bafkreiapm5s7hiahmh74hslmy75zy3vgnjgstp5zqfn32jq5eqfllxlnre"
+      },
+      "date": "Aug 4, 2023",
+      "text": "Why? Why any of this? Who needs this?",
+      "likes": 303,
+      "reposts": 60
+    },
+    {
+      "url": "https://bsky.app/profile/maris.bsky.social/post/3mvd5ucmdsk2c",
+      "author": {
+        "handle": "maris.bsky.social",
+        "displayName": "Maris Kreizman",
+        "avatar": "https://cdn.bsky.app/img/avatar/plain/did:plc:dna3c6dbiajizvm2aionxled/bafkreiapm5s7hiahmh74hslmy75zy3vgnjgstp5zqfn32jq5eqfllxlnre"
+      },
+      "date": "Sep 12, 2026",
+      "text": "I still believe that AI will only kill us spiritually and intellectually. Not physically.",
+      "likes": 154,
+      "reposts": 16
+    }
   ]
 }
