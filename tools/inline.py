@@ -45,6 +45,7 @@ MIME: dict[str, str] = {
 
 link_re = re.compile(r'<link rel="stylesheet" href="([^"]+)"[^>]*>')
 script_re = re.compile(r'<script src="([^"]+)"></script>')
+img_re = re.compile(r'<img\b[^>]*\bsrc="([^"]+)"[^>]*>')
 url_re = re.compile(r"""url\(\s*['"]?([^'")]+)['"]?\s*\)""")
 
 FONT_LICENSE = """<!--
@@ -55,6 +56,17 @@ patched by github.com/ryanoasis/nerd-fonts). License text:
 https://openfontlicense.org
 -->
 """
+
+THEME_LICENSE = """<!--
+The syntax-highlighting theme embedded below is Catppuccin Latte for
+Highlight.js (Copyright 2021 Catppuccin), MIT-licensed: vendored from
+github.com/catppuccin/highlightjs.
+-->
+"""
+
+STYLESHEET_LICENSES: dict[str, str] = {
+    "catppuccin-latte.css": THEME_LICENSE,
+}
 
 
 def is_local(url: str) -> bool:
@@ -73,6 +85,7 @@ def data_uri(path: Path) -> str:
 def inline_stylesheet(href: str) -> str:
     css_path = (DIST / href).resolve()
     css = css_path.read_text()
+    license_note = STYLESHEET_LICENSES.get(css_path.name, "")
 
     def embed(m: re.Match[str]) -> str:
         url = m.group(1)
@@ -83,7 +96,7 @@ def inline_stylesheet(href: str) -> str:
             raise SystemExit(f"{css_path} references missing asset: {asset}")
         return f"url({data_uri(asset)})"
 
-    return f"<style>\n{url_re.sub(embed, css)}\n</style>"
+    return f"<style>\n{license_note}{url_re.sub(embed, css)}\n</style>"
 
 
 def inline_link(m: re.Match[str]) -> str:
@@ -99,17 +112,26 @@ def inline_script(m: re.Match[str]) -> str:
     return f"<script>\n{js}\n</script>"
 
 
+def inline_img(m: re.Match[str]) -> str:
+    if not is_local(m.group(1)):
+        return m.group(0)
+    return m.group(0).replace(
+        f'src="{m.group(1)}"', f'src="{data_uri((DIST / m.group(1)).resolve())}"'
+    )
+
+
 def main() -> None:
     html = SRC.read_text()
 
     refs = set(
         m.group(1)
-        for tag_re in (link_re, script_re)
+        for tag_re in (link_re, script_re, img_re)
         for m in tag_re.finditer(html)
         if is_local(m.group(1))
     )
     html = link_re.sub(inline_link, html)
     html = script_re.sub(inline_script, html)
+    html = img_re.sub(inline_img, html)
 
     plugin_tags = ""
     for global_name, path in PLUGINS:
@@ -127,7 +149,6 @@ def main() -> None:
         )
     html = html.replace(marker, plugin_tags + marker, 1)
     html = html.replace("</head>", FONT_LICENSE + "</head>", 1)
-
     leftover = [u for u in refs if f'href="{u}"' in html or f'src="{u}"' in html]
     if leftover:
         raise SystemExit(f"unresolved local references: {leftover}")

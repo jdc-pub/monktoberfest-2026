@@ -30,8 +30,10 @@
 @font-face {
     font-family: "Noto Sans";
     font-style: italic;
+    /* Variable font, latin subset — one file covers all weights, so <strong>
+       renders true bold italics (no faux-bold synthesis) inside quotes. */
     font-weight: 100 900;
-    src: url(fonts/NotoSans-400-Italic.woff2) format("woff2");
+    src: url("fonts/NotoSans-Italic[wght].woff2") format("woff2");
 }
 
 @font-face {
@@ -109,7 +111,10 @@
    non-present sections with `display: none` (so `display: flex` is only
    applied to `.present` slides), and its PDF renderer lays slides out
    itself with `!important` overrides. */
-html:not(.reveal-print) .reveal .slides > section:not(.title):not(.divider) {
+html:not(.reveal-print)
+    .reveal
+    .slides
+    section:has(> h2):not(.title):not(.divider) {
     height: 100%;
     box-sizing: border-box;
     padding-top: 0.75em;
@@ -120,7 +125,7 @@ html:not(.reveal-print) .reveal .slides > section:not(.title):not(.divider) {
 html:not(.reveal-print)
     .reveal
     .slides
-    > section.present:not(.title):not(.divider) {
+    section.present:has(> h2):not(.title):not(.divider) {
     display: flex !important;
     flex-direction: column;
     align-items: flex-start;
@@ -131,6 +136,18 @@ html:not(.reveal-print)
     font-size: 1.55em;
     line-height: 1.12;
     margin: 0 0 0.9em;
+}
+
+/* [.smaller] sections: the role lands on the <section> (same mechanism as
+   [.divider]), so scaling font-size here shrinks every em-based size on
+   the slide — body, lists, quote blocks, and the h2 proportionally. */
+
+.reveal .slides > section.smaller {
+    font-size: 0.75em;
+}
+
+.reveal .slides > section.tiny {
+    font-size: 0.65em;
 }
 
 /* Auto top/bottom margins center the body in the space the pinned header
@@ -215,6 +232,12 @@ html:not(.reveal-print) .reveal .slides > section.present.divider {
     margin: 0;
 }
 
+/* [.tiny] quote blocks (e.g. the long litigation excerpt) scale the whole
+   block down, same factor as section-level .tiny. */
+.reveal .quoteblock.tiny {
+    font-size: 0.65em;
+}
+
 .reveal .quoteblock .attribution {
     margin-top: 1em;
     text-align: right;
@@ -244,6 +267,38 @@ html:not(.reveal-print) .reveal .slides > section.present.divider {
     border-radius: 4px;
 }
 
+/* Code listings: <div class="listingblock"><div class="content">
+   <pre class="highlightjs highlight"><code class="language-julia hljs">…
+   Same hairline-outline language as the screenshot borders, but on a
+   transparent box so the slide paper shows through. [.tiny] scales the
+   whole block down (same factor as section-level .tiny) to fit more code. */
+
+.reveal .listingblock {
+    border: 1px solid rgba(111, 91, 146, 0.45);
+    border-radius: 4px;
+    background: none;
+    padding: 0.6em 0.9em;
+}
+
+.reveal .listingblock pre {
+    background: none;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* The highlight.js theme paints code.hljs dark (monokai default, or any
+   theme's own background); keep only its token colors and let the slide
+   paper show through. */
+.reveal .listingblock code.hljs {
+    background: transparent;
+    padding: 0;
+}
+
+.reveal .listingblock.tiny {
+    font-size: 0.65em;
+}
+
 .reveal .dlist dt {
     font-weight: 700;
     color: #6f5b92;
@@ -259,4 +314,309 @@ html:not(.reveal-print) .reveal .slides > section.present.divider {
 
 .reveal .dlist dd p {
     margin: 0;
+}
+
+/* ----- 5. Bluesky post cards --------------------------------------------------- */
+/* The "Creative Writers" slide: <div class="bsky-field"> holds
+   <article class="bsky-card"> elements scattered across the slide body
+   (fixed width, height grows with the post), built at load time from the
+   JSON embedded in the slide. The JavaScript driver (js/bsky-cards.js)
+   opens with a burst of three cards and then staggers one in every 3s —
+   2s show, then a 5s fade, three coexisting — and only runs while the
+   slide is `.present`. Full-bleed and non-interactive so they never steal
+   the title's focus. */
+
+.reveal .bsky-field {
+    position: absolute;
+    /* Match the content column (.slide-content is 88% wide, left-aligned):
+       left edge aligns with the body text, right inset clears the column's
+       max width by ~1.5% so clamped cards never reach its edge. Top starts
+       below the pinned header (0.75em padding + ~1.7em h2 line + 0.9em
+       margin) and the bottom keeps clear of the slide border. */
+    inset: 3.5em 13.5% 1.5em 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+/* Static stand-in for the field: a pre-rendered image of the animation's
+   final frame (the last four cards), shown only if the driver never runs
+   (no JS, blocked script, or unreadable JSON) — bsky-cards.js removes it
+   as soon as it builds the live cards. Sized to the field's exact box so
+   the cards land where the animation would leave them. */
+.reveal .bsky-fallback-img {
+    position: absolute;
+    top: 3.5em;
+    left: 0;
+    width: 86.5%;
+    height: calc(100% - 5em);
+    object-fit: contain;
+    pointer-events: none;
+}
+
+.reveal .bsky-card {
+    position: absolute;
+    /* Fixed width, flexible height: the card grows with its post (taller for
+       long posts, a compact minimum for one-liners) but every card is the
+       same width. */
+    width: 250px;
+    min-height: 128px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 10px 14px;
+    background: #fff;
+    border: 1px solid rgba(111, 91, 146, 0.45);
+    border-radius: 8px;
+    color: #3d3754;
+    text-align: left;
+    font-size: 12.5px;
+    line-height: 1.45;
+    opacity: 0;
+    transform: translateY(14px) scale(0.96);
+    transition:
+        opacity 450ms ease,
+        transform 450ms ease;
+}
+
+.reveal .bsky-card.bsky-show {
+    opacity: 0.92;
+    transform: none;
+}
+
+.reveal .bsky-card header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+}
+
+.reveal .bsky-avatar {
+    flex: 0 0 auto;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.reveal .bsky-fallback {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #6f5b92;
+    color: #faf9fc;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.reveal .bsky-who {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.25;
+    min-width: 0;
+}
+
+.reveal .bsky-who strong {
+    font-size: 12.5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.reveal .bsky-meta {
+    font-size: 11px;
+    color: rgba(61, 55, 84, 0.7);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.reveal .bsky-card p {
+    margin: 0;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 10;
+    overflow: hidden;
+}
+
+/* ----- 6. Rich embed (link card) ------------------------------------------------ */
+/* The "2021: GPT-2 / GPT-3" slide: an <a class="rich-embed"> shows the
+   OpenGraph image GitHub serves to Twitter/X and iMessage for the
+   Lord-Robot-Andy repository — just the render itself, no card chrome.
+   The image is vendored in img/ (fetched from opengraph.githubassets.com)
+   so it renders offline and survives tools/inline.py. */
+
+.reveal .rich-embed {
+    display: block;
+    width: 24em;
+    margin: 0 0 1.2em;
+    line-height: 0;
+}
+
+.reveal .rich-embed-media {
+    display: block;
+    width: 100%;
+    height: auto;
+    /* The § 4 screenshot rule frames every slide image; the OG render
+       already carries its own framing. */
+    border: none;
+    border-radius: 0;
+}
+
+/* Tufte slides replace the usual content inset with a wide main column and
+   an optional right-margin column for native AsciiDoc sidenotes or callouts. */
+.reveal .slides section.tufte-slide .slide-content {
+    width: 100%;
+}
+
+.reveal .slides section.tufte-slide .listingblock {
+    box-sizing: border-box;
+    width: 70%;
+}
+
+.reveal .slides section.tufte-slide .listingblock pre {
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+}
+
+.reveal .slides section.tufte-slide .sidebarblock.sidenote,
+.reveal .slides section.tufte-slide .colist {
+    position: absolute;
+    top: 23%;
+    right: 1%;
+    width: 26%;
+    box-sizing: border-box;
+    padding-left: 0.75em;
+    font-size: 0.42em;
+    line-height: 1.4;
+    text-align: left;
+}
+
+.reveal .slides section.tufte-slide .sidebarblock.sidenote {
+    border-left: 1px solid rgba(111, 91, 146, 0.45);
+}
+
+.reveal .slides section.tufte-slide .sidebarblock.sidenote p {
+    margin: 0 0 0.8em;
+}
+
+.reveal .slides section.tufte-slide .colist ol,
+.reveal .slides section.tufte-slide .colist table {
+    margin: 0;
+    padding-left: 1.2em;
+    width: auto;
+}
+
+.reveal .slides section.tufte-slide .colist p {
+    margin: 0 0 0.8em;
+}
+
+.reveal .slides section.tufte-slide .colist code {
+    font-size: 0.9em;
+}
+
+.reveal .slides section.tufte-slide .colist > table td {
+    padding: 0 0.5em 0.6em 0;
+    vertical-align: top;
+}
+
+/* Callout numbers: open (unfilled) circles in the ink color, overriding the
+   converter's solid dark badges. */
+.conum[data-value] {
+    color: var(--r-main-color) !important;
+    background: transparent;
+    border: 1px solid var(--r-main-color);
+    font-family: var(--r-main-font);
+}
+
+.conum[data-value] * {
+    color: var(--r-main-color) !important;
+}
+
+/* ----- 7. OpenGraph link cards -------------------------------------------------- */
+/* Source-citation slides: the native `og::URL[]` block macro
+   (tools/og-macro.rb, loaded via -I tools -r og-macro.rb) resolves to an
+   <a class="og-card"> at build time from data/og-links.json (entries
+   generated by tools/make-og-data.py or hand-curated for sites that
+   block crawlers). Slack/iMessage-style preview: the page's OpenGraph
+   image over a site eyebrow, headline, description, and host · date
+   footer. Markup is emitted during conversion, so unlike § 5 there is
+   no runtime driver and no fallback stand-in. */
+
+.reveal .og-cards > .content {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.reveal .og-cards .og-card {
+    width: 100%;
+    min-width: 0;
+}
+
+.reveal .og-card {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 420px;
+    background: #fff;
+    border: 1px solid rgba(111, 91, 146, 0.45);
+    border-radius: 8px;
+    overflow: hidden;
+    color: #3d3754;
+    text-align: left;
+    text-decoration: none;
+    font-size: 13px;
+    line-height: 1.45;
+}
+
+.reveal .og-card-media {
+    display: block;
+    width: 100%;
+    aspect-ratio: 2 / 1;
+    object-fit: cover;
+    /* § 4 frames every slide image; the card carries its own framing. */
+    border: none;
+    border-radius: 0;
+}
+
+.reveal .og-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding: 10px 14px 12px;
+    min-width: 0;
+}
+
+.reveal .og-card-site {
+    font-size: 10.5px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: rgba(61, 55, 84, 0.7);
+}
+
+.reveal .og-card-title {
+    font-weight: 700;
+    font-size: 14.5px;
+    color: #2f2a45;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.reveal .og-card-desc {
+    color: rgba(61, 55, 84, 0.85);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+}
+
+.reveal .og-card-host {
+    font-size: 11px;
+    color: rgba(61, 55, 84, 0.7);
 }

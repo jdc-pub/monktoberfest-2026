@@ -20,5 +20,8 @@
   "homepage": "https://github.com/jdc-pub/monktoberfest-2026#readme",
   "dependencies": {
     "reveal.js": "^5.2.1"
+  },
+  "devDependencies": {
+    "puppeteer-core": "^25.12.0"
   }
 }

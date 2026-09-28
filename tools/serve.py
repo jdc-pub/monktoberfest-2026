@@ -19,14 +19,19 @@ PORT = 8080
 ROOT = Path(__file__).resolve().parent.parent
 DOC = ROOT / "presentation.adoc"
 OUT = ROOT / "dist" / "presentation.html"
-WATCH_DIRS = ("css", "img")
+WATCH_DIRS = ("css", "data", "img", "js")
+ADOC_FLAGS = ["-I", "tools", "-r", "og-macro.rb", "-r", "bsky-macro.rb"]
 
 RELOAD_POLL = b"""
 <script>
 (() => {
   const v = () => fetch('/__reload').then(r => r.text());
   v().then(initial => setInterval(async () => {
-    if (await v() !== initial) location.reload();
+    if (await v() !== initial) {
+      const i = Reveal.getIndices();
+      location.hash = `#/${i.h}/${i.v}`;
+      location.reload();
+    }
   }, 700));
 })();
 </script>
@@ -62,13 +67,17 @@ def rebuild_loop() -> None:
         if now == last:
             continue
         last = now
+        old = OUT.read_bytes() if OUT.is_file() else None
         r = subprocess.run(
-            ["asciidoctor-revealjs", str(DOC), "-o", str(OUT)],
+            ["asciidoctor-revealjs", *ADOC_FLAGS, str(DOC), "-o", str(OUT)],
             cwd=ROOT,
             capture_output=True,
             text=True,
         )
         if r.returncode == 0:
+            if OUT.read_bytes() == old:
+                log("no output change")
+                continue
             State.bump()
             log(f"rebuilt -> {OUT.relative_to(ROOT)}")
         else:
@@ -105,7 +114,9 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 
 def main() -> None:
     subprocess.run(
-        ["asciidoctor-revealjs", str(DOC), "-o", str(OUT)], cwd=ROOT, check=True
+        ["asciidoctor-revealjs", *ADOC_FLAGS, str(DOC), "-o", str(OUT)],
+        cwd=ROOT,
+        check=True,
     )
     State.bump()
     threading.Thread(target=rebuild_loop, daemon=True).start()
