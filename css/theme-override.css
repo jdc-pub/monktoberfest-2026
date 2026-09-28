@@ -587,6 +587,8 @@ html:not(.reveal-print) .reveal .slides > section.present.divider {
 .reveal .og-card-media {
     display: block;
     width: 100%;
+    max-width: none;
+    margin: 0;
     aspect-ratio: 2 / 1;
     object-fit: cover;
     border: 0;
