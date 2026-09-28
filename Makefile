@@ -10,9 +10,6 @@ serve:
 typecheck:
 	mypy --strict tools
 
-og-data:
-	python3 tools/make-og-data.py $(URLS)
-
 lint:
 	acdc lint -A all -D one-sentence-per-line essay.adoc presentation.adoc
 
