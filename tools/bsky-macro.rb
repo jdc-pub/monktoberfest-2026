@@ -33,11 +33,16 @@ module Bsky
     JSON.parse(Net::HTTP.get(uri))
   end
 
+  def did_for(handle)
+    get('com.atproto.identity.resolveHandle', "handle=#{handle}")['did'] ||
+      get('app.bsky.actor.getProfile', "actor=#{handle}")['did'] or
+      raise %(unable to resolve handle: #{handle})
+  end
+
   def at_uri(url)
     m = url.match(%r{\Ahttps://bsky\.app/profile/([^/]+)/post/([^/?#]+)\z})
     raise %(not a bsky.app post URL: #{url}) unless m
-    did = get('com.atproto.identity.resolveHandle', "handle=#{m[1]}")['did']
-    "at://#{did}/app.bsky.feed.post/#{m[2]}"
+    "at://#{did_for(m[1])}/app.bsky.feed.post/#{m[2]}"
   end
 
   # Posts as {url:, author:{handle,displayName,avatar}, date:, text:,
@@ -45,7 +50,7 @@ module Bsky
   def posts(urls)
     uris = urls.to_h { |u| [at_uri(u), u] }
     found = get('app.bsky.feed.getPosts', 'uris=' + uris.keys.join('&uris='))
-    found['posts'].filter_map do |p|
+    Array(found['posts']).filter_map do |p|
       url = uris[p['uri']]
       next unless url
       date = DateTime.parse(p['record']['createdAt'])
