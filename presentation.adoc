@@ -14,18 +14,76 @@ Joey Carpinelli <joey@carpinelli.email>
 :highlightjs-theme: ../css/themes/catppuccin-latte.css
 
 
+[.notes]
+--
+- Thank you all so much.
+- I'm really excited to be here.
+- My name is Joey.
+- I am a software engineer.
+- And I want to talk to you today about what we, as technologists, owe creatives.
+- And when I say creatives, I'm including visual artists, painters, drawers, animators, musicians, and creative professionals like marketers, and many other folks in many other fields.
+--
+
+
 [.divider]
 == Creatives
+
+[.notes]
+--
+- I'm going to spend most of my time today talking about creative writers in particular, because a couple of months ago, I married one.
+- My wife is a creative writer.
+- She writes fiction.
+--
 
 
 == Many Creatives Hate AI
 
 bsky-cards::https://bsky.app/profile/authorsguild.org/post/3lktctiu6522m,https://bsky.app/profile/3dfrost.bsky.social/post/3ma5ao4kdgk2h,https://bsky.app/profile/mollyjongfast.bsky.social/post/3m35zf2w3ps2j,https://bsky.app/profile/masnick.com/post/3l32cyuxizk2o,https://bsky.app/profile/404media.co/post/3mm2ivguvq22x,https://bsky.app/profile/scumbelievable.bsky.social/post/3mecsr6gi622y,https://bsky.app/profile/scumbelievable.bsky.social/post/3lgqkg5fpsc2v,https://bsky.app/profile/jpbrammer.bsky.social/post/3lgwgacb54k2i,https://bsky.app/profile/notalawyer.bsky.social/post/3mwe5juj4jk22,https://bsky.app/profile/scumbelievable.bsky.social/post/3me7gxmndak2g,https://bsky.app/profile/gabino.bsky.social/post/3lfznh72fvc2u,https://bsky.app/profile/gabino.bsky.social/post/3liwvyehpn225,https://bsky.app/profile/maris.bsky.social/post/3k45dh7dnhx23,https://bsky.app/profile/maris.bsky.social/post/3mvd5ucmdsk2c[]
 
+[.notes]
+--
+- I met her 6 years ago on Saturday.
+- And a lot has happened in the last 6 years.
+- I have grown into professional software engineering roles.
+- I've learned a lot about her field, and met many of her colleagues and writing friends — some of whom are now my close friends.
+- And I think the public has learned a lot about the software industry in the last few years, at least the segment of the software industry that is AI companies.
+- I hear complaints, and I'm sure you have heard similar complaints.
+- When I talk to creatives in my life and hear them talk about technology, they are often expressing fear or exasperation or flat-out rage.
+- They do not trust technologists anymore.
+- They do not trust technologists who deliver useful products to improve their lives.
+- In fact, many see a lot of technology companies as a direct threat to their livelihood — again, with good reason.
+- I think that's catastrophic.
+- For one thing, technology can be a social good, and so it should be a social good.
+- I would like to not see another software-driven wedge into society.
+- But on technologists and creatives specifically, I think our two fields are very important for one another.
+- We materialize what creatives often imagined decades ago.
+- I'm speaking in a personal capacity, but I currently work for a robotics research institute.
+- The word robot comes from a Czech play, over 100 years ago.
+- Ironically, many of the — I would say unfounded — AI "doomer takes" about human extinction are mirroring stories that we've heard for decades from creatives.
+- So I think that technologists and creatives are an important ecosystem.
+- And I have been in a privileged position to have been in the room when creatives are talking with one another, and with me, about what the technology industry has done in the last few years and how they're feeling about it.
+- I've absorbed those criticisms, and I would like to radiate those criticisms back at you — perfectly safe, at a much lower dose.
+- The goal of this is to understand how we got here, so we can start taking small steps to mend that relationship with creatives.
+--
+
 
 == 2021: GPT-2 / GPT-3
 
 image:lord-robot-andy-github.png[alt]
+
+[.notes]
+--
+- Because a few years ago, creatives didn't fear these models — no one really feared these models.
+- I remember, it was during the pandemic — I met my wife, we had been dating for a few months.
+- She showed me Cats, the musical, and other musicals by Andrew Lloyd Webber.
+- It was a dark time.
+- But I was a university student — a graduate student in aerospace engineering.
+- I had a university email.
+- And so one day I decided to just sign up for a GPT-2 API key, and later a GPT-3 API key.
+- And I stuck a process-prompt function in an executable notebook.
+- So, kind of like a chat app — but it wasn't a chat.
+- You could put in a custom prompt.
+--
 
 [.tufte-slide]
 == 2021: GPT-2 / GPT-3
@@ -68,6 +126,14 @@ end
 <2> I was _terrified_ of a program generating prose in my name.
 <3> This was not a chat interface! The response was a literal continuation.
 
+[.notes]
+--
+- I love this code for a lot of reasons.
+- First of all, this is Julia — I'm saying "only give me one thing," but I'm not going to index manually, because the collection is generic over index operations, and I kind of get a kick out of that.
+- Second, I remember I was terrified of a computer program generating writing for me, in my name — that's kind of interesting.
+- And as I said, this wasn't a chat interface, but you could put in a prompt, then a colon — you could say "a screenplay that does this," and then put in a response.
+--
+
 [.smaller]
 == GPT-2 / GPT-3
 
@@ -77,6 +143,19 @@ end
 [.fragment]
 [quote, GPT-2]
 `Valjean: No way, Javert! I ain't no stool pigeon!`
+
+[.notes]
+--
+- So I tried: "Give me a screenplay that reimagines Les Misérables" — instead of 19th century revolutionary France, let's try 20th century mob New York City, just like Sopranos, aggressively Italian American.
+- Make me miss my childhood visiting relatives in North Jersey.
+- Not that they're in the mob — they're not in the mob.
+- But it could do this.
+- And I remember — well, unfortunately, this script has been lost to time — one line I don't know if I'll ever forget: Valjean saying, "No way, Javert. I ain't no stool pigeon."
+- Which means police informant.
+- So, no one was afraid of this.
+- This is cute — this is a total gimmick.
+- It was kind of funny that a computer program could generate things like this.
+--
 
 
 
@@ -90,6 +169,26 @@ end
 * *Spring 2023 Discussion Post*
 ** _I see what you mean, but I'd push back a little on the idea that the text lacks pathos — I think the emotional appeal is there, just operating more quietly than we might expect. Pathos doesn't have to mean vivid sob stories or dramatic language; sometimes an author builds emotion through understatement, word choice, or even a deliberately cold, clinical tone that makes the reader feel *more* unsettled, not less. When you say the piece feels emotionally flat, I'd encourage you to ask whether that flatness is an absence of pathos or a strategic choice aimed at a specific audience—maybe readers who'd distrust anything that feels too manipulative. For me, the most affecting moment was actually the most restrained one, which suggests the author trusts the audience to supply the feeling themselves._
 
+[.notes]
+--
+- I saw the sentiments in creatives change after ChatGPT was released, in November 2022.
+- My wife was in an MFA program at that time, and so I was learning a lot about how writing programs work.
+- Specifically, TAs in STEM were kind of like professor assistants — but that is not how it works in the writing world.
+- When you're a TA, you're a full professor: you're making the lesson plans, leading the lectures, creating the assignments, and grading them.
+- I remember in that first fall semester, before ChatGPT was released, how hard it is sometimes to get undergraduates to write substantive discussion posts.
+- I remember my own wimpy discussion posts when I was an undergrad.
+- Before ChatGPT was released, there was a percentage of comments that would be like this: "I agree with Mark."
+- Okay, can we get a little bit more? It's kind of like pulling teeth.
+- In the spring, which is the first semester that started with ChatGPT, you would see a lot fewer of those comments.
+- Instead, you would see this.
+- You can't prove it, but it's clear that some number of students were not writing in their how-to-write class.
+- And I heard the graduate students in this program talking about this — talking about writing centers, and grading, and helping undergraduates write.
+- This was insulting.
+- Many universities encouraged the use of these tools — ChatGPT in particular — and did not provide guidance or tools to professors for policing plagiarism or enforcing their plagiarism policies.
+- I don't think the sentiment that many creatives had towards AI recovered from this point.
+- This ended up being more than an annoyance: the animators and writers who I know started to have a very negative view of artificial intelligence after it came out, after the public got a better understanding of how these products were built.
+--
+
 
 == New York Times' Lawsuit
 
@@ -100,6 +199,13 @@ og::https://www.nytimes.com/2023/12/27/business/media/new-york-times-open-ai-mic
 [.tiny]
 [quote]
 ...contends that millions of articles published by The Times were used to train automated chatbots that now compete with the news outlet as a source of reliable information.
+
+--
+
+[.notes]
+--
+- The New York Times sued OpenAI and Microsoft.
+- Arguing that these companies were now competing against the New York Times while using the New York Times' content to train the models.
 --
 
 == SAG-AFTRA Strike
@@ -113,6 +219,13 @@ og::https://web.archive.org/web/20230715134352/https://www.theverge.com/2023/7/1
 “This ‘groundbreaking’ AI proposal that they gave us yesterday, they proposed that our background performers should be able to be scanned, get one day’s pay, and their companies should own that scan, their image, their likeness and should be able to use it for the rest of eternity on any project they want, with no consent and no compensation."
 --
 
+[.notes]
+--
+- There was the SAG-AFTRA strike — actors alleging that the studios wanted to basically take a 3D snapshot of certain actors, so they could use their image and likeness in the future for free.
+- In general, the creatives who I talk to feel used.
+- They felt that these technologies were an existential threat to their field.
+--
+
 == Litigation Documents
 
 // https://authorsguild.org/app/uploads/2026/09/Class-Plaintiffs-SUF-9.17.26.pdf
@@ -122,6 +235,17 @@ og::https://web.archive.org/web/20230715134352/https://www.theverge.com/2023/7/1
 The paper observed that this assumption is unlikely to hold and “may be very bad for Microsoft’s business if it does” both because the public at large will view it “to be an astonishing theft of unprecedented proportions” and because Microsoft’s customers could go on “data strikes” and “purposely withhold their content from Microsoft.” Ex. 183 at -429–30.
 To address these issues, Hecht recommended that Microsoft focus on creating “compliant foundation models” developed “as a deep partnership between us and the people and institutions who produced the data on which they are trained.” Id. at -431.
 
+[.notes]
+--
+- And just recently, this month, we've had some court documents unsealed from the New York Times lawsuit — and it turns out that folks in tech companies were talking about this, too.
+- One executive at Microsoft talked about how the public would see this as, quote, "an astonishing theft of unprecedented proportions."
+- It's kind of guaranteed to make headlines — and it did.
+- Something that I thought was interesting: the executive recommended that Microsoft focus on creating "compliant foundation models" developed "as a deep partnership between us and the people and institutions who produced the data on which they are trained."
+- That sounds lovely.
+- Kind of compensating the creatives who are creating this work, and incorporating the work in partnership with them.
+- I would have loved to see this happen.
+--
+
 == Litigation Documents
 
 // https://authorsguild.org/app/uploads/2026/09/S.D.N.Y.-25-md-03143-dckt-001982_000-filed-2026-09-17.pdf
@@ -129,6 +253,14 @@ To address these issues, Hecht recommended that Microsoft focus on creating “c
 [.tiny]
 [quote, OpenAI Inc. Copyright Infringement Litigation]
 A Microsoft document recognizes that nobody wins *[when AI products replace original content]*: "Our AI content strategy has started a 'doom loop' that will hurt the performance of our models and the entire web at the same time: It is highly unusual that an end-product threatens the economic foundations of its essential suppliers, but that is the situation we have created for our LLM business with respect to its ‘content supply chain.’” SF1672.
+
+[.notes]
+--
+- Instead, I think a lot of creatives continued to see AI companies talk about replacing creatives.
+- Another Microsoft document has a quote that our content strategy has started a "doom loop" — basically saying that we, as the AI companies, are going to be sucking up creative work, and that's going to kill a lot of it, and then we're going to compete with it and kill creative work — and then we won't have anything to train on.
+- Kind of an acknowledgment that they did see themselves, at least some of them, as producing products that were, in part, substitutions for artists.
+- And again, the creatives who I know just absolutely hated that.
+--
 
 
 == Substituting Artists
@@ -142,6 +274,12 @@ og::https://workspace.google.com/blog/product-announcements/workspace-drops-crea
 Avatars in Google Vids let you scale your on-screen presence, delivering engaging and on-brand messaging without the hassle, time, or expense of traditional studio production.
 --
 
+[.notes]
+--
+- Google presented Google Vids, letting you scale your on-screen presence without the hassle of traditional studio production.
+- A useful feature, I can imagine, but placing themselves in direct competition with creatives.
+--
+
 == Substituting Artists
 
 [.og-cards]
@@ -153,9 +291,20 @@ og::https://openai.com/index/gpt-4/[image=img/gpt-4.png]
 GPT-4 is more creative and collaborative than ever before. It can generate, edit, and iterate with users on creative and technical writing tasks, such as composing songs, writing screenplays, or learning a user’s writing style.
 --
 
+[.notes]
+--
+- GPT-4 talked about how its writing was more creative and collaborative than ever, even learning a user's writing style.
+--
+
 == Substituting Artists
 
 video::../img/anthropic-404.mov[options="autoplay,loop,nocontrols"]
+
+[.notes]
+--
+- In the process of making this presentation, I messed up a link, and the Anthropic 404 page literally writes you a poem.
+- In my experience, the poets don't find this cute anymore.
+--
 
 == Substituting Artists
 
@@ -166,6 +315,16 @@ og::https://www.anthropic.com/news/claude-3-5-sonnet/[]
 [.tiny]
 [quote, Anthropic]
  It shows marked improvement in grasping nuance, humor, and complex instructions, and is exceptional at writing high-quality content with a natural, relatable tone.
+--
+
+[.notes]
+--
+- And, of course, Anthropic also talked about how great their models' writing is.
+- Creatives did not.
+- I think this saga is what kind of doomed the image of AI technologies for creatives — it was presented to them, in my opinion, as direct competition in a lot of cases.
+- And I think a lot of those communications are softening now.
+- Google, in particular — I saw an ad recently where they are talking about building trust with the creative communities.
+- But a lot of this damage has been done.
 --
 
 == Destructive Book Scanning
@@ -182,22 +341,69 @@ Project Panama is our effort to destructively scan all the books in the world[..
 We don’t want it to be known that we are working on this.
 --
 
+[.notes]
+--
+- And there was something else that we learned this year that just filled the artists I know with a white-hot rage.
+- That is the destructive book scanning practice: Project Panama at Anthropic.
+- Again, due to court memos, findings of fact, and records that are now released, we have an internal memo quote from Anthropic: "Project Panama is our effort to destructively scan all the books in the world. We don't want it to be known that we are working on this."
+- Which — not a great thing to write.
+- I guess, you know, I appreciate the candor.
+--
+
 == Legally Gray
 
 - Immediate public backlash!
 - Backlash to the backlash in tech.
 - Unhelpful.
 - Legal gray area.
-- Crying law after confidently training on all of the world's information rings hallow.
+- Crying law after confidently training on all of the world's information rings hollow.
+
+[.notes]
+--
+- This gets to a pretty complicated topic of what fair use and copyright mean.
+- I'm not a lawyer, but there was an immediate public backlash when this came out.
+- And I then saw a lot of comments on that backlash from folks within the tech industry that I would say were unhelpful.
+- Some were saying that it's just destroying one volume per published work — and is that a big deal?
+- And that books are destroyed anyway, every year.
+- And that some of these companies have to destroy the books — their hands are tied through the law to comply with fair use.
+- I think many of those comments are unhelpful.
+- When creatives hear that their hands are tied because of quirks of copyright law, I think that rings hollow when they see quotes of "an astonishing theft."
+- It's tough to cry law when companies, in the view of many, are not acting with much care for the law.
+--
 
 == Google Patent US7508978B1
 
 .Detection of grooves in scanned images
 image::https://patentimages.storage.googleapis.com/86/99/b8/8ea067c4d87f5f/US07508978-20090324-D00000.png[]
 
+[.notes]
+--
+- But that last comment — that their hands are tied — maybe, maybe not.
+- Other companies have done something different.
+- Google Books patented a device to detect grooves in scanned images — a non-destructive scanner.
+- And maybe this could have been used.
+- That is, it was built for a different purpose than training.
+- In general, this has been talked about at Monktoberfests past: we, in technology, are often at the bleeding edge of law, because we're at the bleeding edge of technology by definition.
+- And if we feel that a law is constraining us in a way that will inhibit progress for the public, it's our responsibility to talk about that — to publicly, and democratically, talk about changing the law.
+- That would go a long way.
+--
+
 == Social Problems?
 
 _We should rebuild trust with creatives!_
+
+[.notes]
+--
+- We've got some social problems here, between technologists and creatives.
+- And, as I said before, I think this is worth fixing.
+- What it's going to take to really resolve that trust is different decisions at the top.
+- We are talking about massive — ultimately trillions of dollars of — decisions that affect organizations.
+- And that's important, and I wanted to start there because this is how we got here.
+- But as far as moving forward, I am not at the point in my career where I'm making organizational decisions.
+- I really have no credibility or credentials to come up here and recommend organizational actions to move forward.
+- I do want to stay engaged as a technologist, but right now I'm making technical decisions within my professional organizations, not organizational ones.
+- And so, in the remaining time today, I would like to raise some topics, to take some small steps forward here.
+--
 
 [.divider]
 == Technical Solutions
@@ -205,6 +411,12 @@ _We should rebuild trust with creatives!_
 [.tiny]
 [.fragment]
 _Alternate title: software engineer proposes new software._
+
+[.notes]
+--
+- In the remaining time today, I would like to follow in the same mistake that so many early-career technologists take, which is: when presented with a social problem, present a technical solution.
+- I would like to do some nerd sniping this morning.
+--
 
 == Nerd Sniping
 
@@ -214,6 +426,20 @@ _When you share an interesting problem in the hopes that someone will solve it f
 [.fragment]
 .xkcd
 image::nerd-sniping.png[]
+
+[.notes]
+--
+- Overall, I think we're all familiar with nerd sniping — we've seen it on the internet.
+- I always envisioned nerd sniping as when you're sharing an interesting problem in the hopes that someone will solve it for you.
+- Kind of like a friendly version of "won't someone rid me of this meddlesome priest?" — won't someone rid me of this annoying technical problem that I have?
+- I always kind of imagined you write down the problem and crumple it up, and you snipe someone — you throw the little soft, crumpled paper at them, it bonks them on the head, and then they open it up and solve the problem for you.
+- But I'm presenting at the Monktoberfest, so I thought I should go look at the original — the comic.
+- This is not a soft, crumpled paper — the comic is murder.
+- You're presenting a problem on a grid of infinite-ohm resistors, and the physicist is murdered by a truck.
+- The last panel: "I will have no part in this," says the first person — and the second says, "Come on, it's fun. Make a sign. Physicists are 2 points, mathematicians are 3."
+- So this is not the kind of nerd sniping that I would like to do today — we're all getting out of here.
+- But I think there are a lot of low-hanging fruits that we can grab and offer to creatives — partially as a sign of goodwill, and also because their workflows, for writers in particular, are missing technologies that we've had for 20 years.
+--
 
 
 == Version Control
@@ -227,11 +453,32 @@ image::nerd-sniping.png[]
 |===
 
 
+[.notes]
+--
+- So, first of all: version control, right?
+- We have Git — we have a universal version-control format, and we have cloud platforms that accept it.
+- But if you want to change cloud platforms, you don't lose the version history of your work — it's universal.
+- It's free, and it's open source.
+- More recently, folks have been playing with conflict-free replicated data types.
+- So you have things like Automerge — ways to have multiplayer editing.
+- The Zed editor team is building something similar.
+- And that's great.
+--
+
 == Version Control
 
 _Casey's work._
 
-_Remember to say that Word *does* have autosave, but it takes over a minute to save a single document, and forces you to save things in OneDrive.
+[.notes]
+--
+- Because so many of the versioning systems are tied in with platforms in order to recover unsaved documents.
+- In Microsoft Word, you have to go through OneDrive, and now your file doesn't exist in your normal Documents folder — it exists in OneDrive.
+- Now, Word does have autosave, but it takes over a minute to save a single document, and it forces you to save things in OneDrive.
+- When Microsoft Word crashes — I haven't had an editor crash that's caused me to lose work in I can't even remember how long — this still happens for creatives.
+- And they have to go to a Program Files folder and find a cryptically named file, open it not in the default application but in a text editor, so that they can recover the lost work.
+- That's an abomination.
+- And I think we can do a lot of good bringing version control to creatives.
+--
 
 == Version Control
 
@@ -244,17 +491,54 @@ $ ls
 'My Story (Final).docx
 ```
 
+[.notes]
+--
+- A lot of creatives are still doing this.
+- They're still doing the "version one, version two, filename" thing.
+- And in particular, we have newer platforms like code storage that abstract a lot of the Git operations away while still keeping things in Git.
+- This could be a really interesting application for writers — for end users.
+- Just versioning documents kind of behind the scenes.
+- It's kind of doing what Microsoft is doing — saving files to Program Files — but it's an append-only log of snapshots, rather than loose files.
+- And I think that's an improvement for writers.
+--
+
 == Citations and Formatting
 
 image:https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/BibTeX_logo.svg/1920px-BibTeX_logo.svg.png[]
+
+[.notes]
+--
+- We also have automatic citation handling through BibTeX and formatting.
+- We've had content–style separation for so long.
+- And a lot of writers today are still using the same word processors.
+- When I talk about BibTeX, creatives look at me like I'm an alien — they're like, "What are you talking about? You don't have to format citations?"
+- I'm like, oh yeah — we have this.
+- Bring it to the journal, and they do the citations.
+- Why can't our conferences do that?
+- I don't know why they're not doing it.
+- I think it's just a lot of friction, and we can ease that friction for them.
+- We have the technology — let's share it.
+--
 
 
 == Word Processing
 
 image:../img/google-docs.png[]
 
-_Distrust of Google bc AI._
-_Grammarly._
+[.notes]
+--
+- And finally: work submission.
+- A note: this slide says word processing, but it will be work submission.
+- On the screenshot: distrust of Google, because of AI — and Grammarly.
+- When writers are submitting their work to online magazines and journals and other places, there are a lot of submission platforms that are really struggling.
+- They cost a lot of money, and literary magazines are having to spend a lot of money when they're often volunteer-run.
+- I think that's something that the open source community can understand and sympathize with.
+- We don't pay for GitLab instances, for example — it's extremely cheap to self-host.
+- We should have some self-hosted, or just very cheap, hosted solutions for submitting work.
+- Again, it could interface with version control.
+- You can have some access controls with user identities.
+- There are things that we can do here, and I think it's worth doing.
+--
 
 == Ask Creatives!
 
@@ -262,14 +546,61 @@ _Grammarly._
 - No chat bots in the application!
 - Avoid leaking details behind your abstractions.
 
+[.notes]
+--
+- But of course, we have to ask creatives — talk to creatives about how they work.
+- Ask them what they're missing.
+- Ask them what's annoying about their workflows, propose things, and see what they think.
+- I will go out on a limb and say: please don't add a chatbot.
+- I would really be surprised if you find a substantial user base interested in that.
+- And avoid leaking the details behind your abstractions.
+- I learned about tree-sitter this last year, and I'm not proud of this.
+- This wasn't AI psychosis — although, in retrospect, it sounds like it.
+- But I then went to my wife and said, well, what if we had a syntax tree, but for prose?
+- Like, you could leave a comment on an individual clause.
+- You can see here in the Zed editor that the concrete syntax tree is viewable, it updates in real time, and it's really efficient on every document.
+- And we could have that — we could even have color coding for the different clauses, and versioning for the different clauses.
+- And she was like, "What the fuck are you talking about?"
+- And we fixed the gas leak in our house, and everybody's safe and fine.
+- And she was right.
+- But — let's ask creatives.
+--
+
 [.divider]
 == Not Zero Sum
 
+[.notes]
+--
+- Before I go, I want to point out that helping creatives is not zero-sum.
+--
+
 
 == Case: Interstellar
+
+[.notes]
+--
+- One of my favorite movies is Interstellar, and it's a perfect example of this.
+- Creatives asked technologists — in this case, scientists — for the best possible simulations of a massive black hole.
+- And in the process of doing that, creatives got this great simulation — a big box office hit.
+- It's a great movie.
+- And scientists, when working on this problem that they wouldn't have worked on otherwise, found new science.
+- This is a new problem domain that we could enter, and I think we would find a lot of benefits there.
+- For writing in particular, we've got a lot of writing workflows today.
+- And so we could use some better prose-writing tools.
+--
 
 
 == Another Technologist
 
 [quote, Dr. Robert Zubrin]
 [I]f you have it in your power to do something great and important and wonderful, then you should.
+
+[.notes]
+--
+- There's one final reason that I want to share, to motivate giving creatives some of our tools.
+- Another technologist from my former days in the space industry — Robert Zubrin — is the architect of the Mars mission plan.
+- In pitching that plan, at the end of his talk, I remember him saying: if you have it in your power to do something great and important and wonderful — and I would add, generous — then you should.
+- And there are a lot of little things we can do that can make the creative industries — the people in those industries — feel more empowered and productive.
+- And we should do that.
+- Thank you.
+--
