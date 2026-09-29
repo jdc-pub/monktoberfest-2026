@@ -660,3 +660,26 @@ html:not(.reveal-print) .reveal .slides > section.present.divider {
         max-width: 22em;
     }
 }
+
+/* Speaker notes: compact, small bullets. */
+aside.notes,
+.reveal aside.notes {
+    font-size: 0.55em;
+    line-height: 1.3;
+}
+
+aside.notes ul,
+.reveal aside.notes ul {
+    margin: 0;
+}
+
+aside.notes li,
+.reveal aside.notes li {
+    margin: 0;
+}
+
+aside.notes li p,
+.reveal aside.notes li p {
+    margin: 0 0 0.15em;
+    line-height: 1.3;
+}
