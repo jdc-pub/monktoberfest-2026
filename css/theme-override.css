@@ -232,8 +232,9 @@ html:not(.reveal-print) .reveal .slides > section.present.divider {
     margin: 0;
 }
 
-/* [.tiny] quote blocks (e.g. the long litigation excerpt) scale the whole
-   block down, same factor as section-level .tiny. */
+/* [.tiny] blocks scale down consistently whether applied to a paragraph,
+   quote, or code listing. */
+.reveal .paragraph.tiny,
 .reveal .quoteblock.tiny {
     font-size: 0.65em;
 }
