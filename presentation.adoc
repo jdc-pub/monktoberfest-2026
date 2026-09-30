@@ -32,21 +32,20 @@ Joey Carpinelli <joey@carpinelli.email>
 --
 - I'm going to spend most of my time today talking about creative writers in particular, because a couple of months ago, I married one.
 - My wife is a creative writer.
-- She writes fiction.
+- I met her 6 years ago on Saturday.
+- And a lot has happened in the last 6 years.
+- I have grown into professional software engineering roles.
+- I've learned a lot about her field, and met many of her colleagues and writing friends — some of whom are now my close friends.
+- And I think the public has learned a lot about the software industry in the last few years, at least the segment of the software industry that is AI companies. She writes fiction.
 --
 
 
-== Many Hate AI!
+== ComplAInts
 
 bsky-cards::https://bsky.app/profile/authorsguild.org/post/3lktctiu6522m,https://bsky.app/profile/3dfrost.bsky.social/post/3ma5ao4kdgk2h,https://bsky.app/profile/mollyjongfast.bsky.social/post/3m35zf2w3ps2j,https://bsky.app/profile/masnick.com/post/3l32cyuxizk2o,https://bsky.app/profile/404media.co/post/3mm2ivguvq22x,https://bsky.app/profile/scumbelievable.bsky.social/post/3mecsr6gi622y,https://bsky.app/profile/scumbelievable.bsky.social/post/3lgqkg5fpsc2v,https://bsky.app/profile/jpbrammer.bsky.social/post/3lgwgacb54k2i,https://bsky.app/profile/notalawyer.bsky.social/post/3mwe5juj4jk22,https://bsky.app/profile/scumbelievable.bsky.social/post/3me7gxmndak2g,https://bsky.app/profile/gabino.bsky.social/post/3lfznh72fvc2u,https://bsky.app/profile/gabino.bsky.social/post/3liwvyehpn225,https://bsky.app/profile/maris.bsky.social/post/3k45dh7dnhx23,https://bsky.app/profile/maris.bsky.social/post/3mvd5ucmdsk2c[]
 
 [.notes]
 --
-- I met her 6 years ago on Saturday.
-- And a lot has happened in the last 6 years.
-- I have grown into professional software engineering roles.
-- I've learned a lot about her field, and met many of her colleagues and writing friends — some of whom are now my close friends.
-- And I think the public has learned a lot about the software industry in the last few years, at least the segment of the software industry that is AI companies.
 - I hear complaints, and I'm sure you have heard similar complaints.
 - When I talk to creatives in my life and hear them talk about technology, they are often expressing fear or exasperation or flat-out rage.
 - They do not trust technologists anymore.
@@ -56,6 +55,15 @@ bsky-cards::https://bsky.app/profile/authorsguild.org/post/3lktctiu6522m,https:/
 - For one thing, technology can be a social good, and so it should be a social good.
 - I would like to not see another software-driven wedge into society.
 - But on technologists and creatives specifically, I think our two fields are very important for one another.
+--
+
+[.image-pair]
+== Creatives → Technologists → Creatives...
+
+image::https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Rosumovi_Univerzální_Roboti_1920.jpg/500px-Rosumovi_Univerzální_Roboti_1920.jpg[]
+image::https://upload.wikimedia.org/wikipedia/commons/9/9a/Wpa-marionette-theater-presents-rur.jpg[]
+[.notes]
+--
 - We materialize what creatives often imagined decades ago.
 - I'm speaking in a personal capacity, but I currently work for a robotics research institute.
 - The word robot comes from a Czech play, over 100 years ago.
@@ -478,6 +486,7 @@ _Casey's work._
 - And I think we can do a lot of good bringing version control to creatives.
 --
 
+[.brand-logos]
 == Citations and Formatting
 
 image::https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/BibTeX_logo.svg/1920px-BibTeX_logo.svg.png[]
@@ -565,14 +574,15 @@ image::../img/syntax-tree.png[]
 
 == Case: Interstellar
 
+image::https://arxiv.org/html/1502.03808v2/Fig16-DiskLensFlare.jpg[]
+
+[.image-quote]
+== Case: Interstellar
+
 image::../img/interstellar-paper.png[]
 
 [quote]
-To describe new insights, from DNGR, into gravitational lensing when the camera is near the spinning black hole, rather than far away as in almost all prior studies; we focus on the shapes, sizes and influence of caustics and critical curves, the creation and annihilation of stellar images, the pattern of multiple images, and the influence of almost-trapped light rays, and we find similar results to the more familiar case of a camera far from the hole.
-
-== Case: Interstellar
-
-image::https://arxiv.org/html/1502.03808v2/Fig16-DiskLensFlare.jpg[]
+To describe new insights... into gravitational lensing when the camera is near the spinning black hole, rather than far away as in almost all prior studies...
 
 [.notes]
 --

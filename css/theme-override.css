@@ -259,12 +259,129 @@ html:not(.reveal-print) .reveal .slides > section.present.divider {
     border-left: 3px solid rgba(111, 91, 146, 0.85);
 }
 
-/* Let images sit directly on the slide paper; their own edges and shadows
-   provide enough definition without a second frame. */
+/* Give photographs and screenshots a soft, consistent edge without
+   rounding logos or other transparent artwork. */
 
-.reveal .slide-content img {
+.reveal .slide-content .imageblock img,
+.reveal .slide-content p > .image img {
     border: 0;
-    border-radius: 0;
+    border-radius: 10px;
+}
+
+.reveal .slide-content .imageblock {
+    margin: 0 0 0.8em;
+}
+
+.reveal .slide-content .imageblock img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Asciidoctor's generated table defaults add an outer frame even when the
+   slide uses tables only as a clean row of logos. */
+
+.reveal table.tableblock {
+    border: 0;
+    background: transparent;
+}
+
+.reveal table.tableblock td.tableblock {
+    padding: 0.5em 1em;
+    vertical-align: middle;
+    border: 0;
+}
+
+.reveal table.tableblock td.tableblock > .content {
+    margin: 0;
+}
+
+.reveal table.tableblock td.tableblock > .content > :last-child {
+    margin-bottom: 0;
+}
+
+.reveal .brand-logos .slide-content {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+    gap: 2em;
+}
+
+.reveal .brand-logos .imageblock {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    min-height: 5em;
+    margin: 0;
+}
+
+.reveal .brand-logos .imageblock img {
+    width: 100%;
+    height: 4.5em;
+    object-fit: contain;
+}
+
+/* The Interstellar case pairs the paper's source image with its abstract;
+   use a balanced two-column layout instead of a stacked image and quote. */
+
+.reveal .image-quote .slide-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    align-items: center;
+    gap: 1.5em;
+    width: 100%;
+}
+
+.reveal .image-quote .imageblock {
+    margin: 0;
+}
+
+.reveal .image-quote .imageblock img {
+    width: 100%;
+    max-height: 11em;
+    object-fit: contain;
+}
+
+.reveal .image-quote .quoteblock {
+    margin: 0;
+}
+
+.reveal .image-quote .quoteblock blockquote {
+    font-size: 0.72em;
+    line-height: 1.5;
+    padding-left: 0.9em;
+}
+
+@media (max-width: 700px) {
+    .reveal .image-quote .slide-content {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0.8em;
+    }
+}
+
+.reveal .image-pair h2 {
+    font-size: 1.2em;
+    margin-bottom: 0.65em;
+}
+
+.reveal .image-pair .slide-content {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: center;
+    gap: 1.5em;
+    width: 100%;
+}
+
+.reveal .image-pair .imageblock {
+    display: grid;
+    place-items: center;
+    width: 100%;
+    margin: 0;
+}
+
+.reveal .image-pair .imageblock img {
+    width: 100%;
+    max-height: 13em;
+    object-fit: contain;
 }
 
 /* Code listings: <div class="listingblock"><div class="content">
