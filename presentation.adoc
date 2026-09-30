@@ -547,6 +547,7 @@ image::https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wo
 - Talk to creatives about how they work.
 - No chat bots in the application!
 - As always, avoid leaking details behind your abstractions.
+- Solve problems that creatives have!
 
 [.notes]
 --
@@ -610,7 +611,7 @@ To describe new insights... into gravitational lensing when the camera is near t
 --
 
 
-== Technicalogy for People
+== Technology for People
 
 [quote, Dr. Robert Zubrin]
 [I]f you have it in your power to do something great and important and wonderful, then you should.
