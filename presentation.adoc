@@ -306,16 +306,6 @@ GPT-4 is more creative and collaborative than ever before. It can generate, edit
 
 == Substituting Artists
 
-video::../img/anthropic-404.mov[options="autoplay,loop,nocontrols"]
-
-[.notes]
---
-- In the process of making this presentation, I messed up a link, and the Anthropic 404 page literally writes you a poem.
-- In my experience, the poets don't find this cute anymore.
---
-
-== Substituting Artists
-
 [.og-cards]
 --
 og::https://www.anthropic.com/news/claude-3-5-sonnet/[]
@@ -323,6 +313,16 @@ og::https://www.anthropic.com/news/claude-3-5-sonnet/[]
 [.tiny]
 [quote, Anthropic]
  It shows marked improvement in grasping nuance, humor, and complex instructions, and is exceptional at writing high-quality content with a natural, relatable tone.
+--
+
+== Substituting Artists
+
+video::../img/anthropic-404.mov[options="autoplay,loop,nocontrols"]
+
+[.notes]
+--
+- In the process of making this presentation, I messed up a link, and the Anthropic 404 page literally writes you a poem.
+- In my experience, the poets don't find this cute anymore.
 --
 
 [.notes]
@@ -425,7 +425,7 @@ image::https://patentimages.storage.googleapis.com/86/99/b8/8ea067c4d87f5f/US075
 == Nerd Sniping
 
 [.tiny]
-_When you share an interesting problem in the hopes that someone will solve it for you._
+_Sharing an interesting problem in the hopes that someone will solve it for you._
 
 [.fragment]
 --
@@ -450,9 +450,10 @@ image::nerd-sniping.png[]
 
 == Version Control
 
-
-[cols="1,1,1"]
+[cols="1,1,1",options="header"]
 |===
+| Git | GitHub | Automerge
+
 |image:https://git-scm.com/images/logos/downloads/Git-Logo-2Color.svg[]
 |image:https://brand.github.com/_next/static/media/logo-03.cc5e5332.png[]
 |image:https://raw.githubusercontent.com/automerge/automerge/main/img/brandmark.svg[]
@@ -461,7 +462,6 @@ image::nerd-sniping.png[]
 
 [.notes]
 --
-- So, first of all: version control, right?
 - We have Git — we have a universal version-control format, and we have cloud platforms that accept it.
 - But if you want to change cloud platforms, you don't lose the version history of your work — it's universal.
 - It's free, and it's open source.
@@ -473,7 +473,7 @@ image::nerd-sniping.png[]
 
 == Version Control
 
-_Casey's work._
+image::../img/bad-vcs.jpg[]
 
 [.notes]
 --
@@ -491,6 +491,17 @@ _Casey's work._
 
 image::https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/BibTeX_logo.svg/1920px-BibTeX_logo.svg.png[]
 image::https://citationstyles.org/assets/img/cropped-csl-logo-600-bordered.png[]
+image::https://typst.app/assets/images/typst.svg[]
+image::https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/500px-CSS3_logo_and_wordmark.svg.png[]
+
+[.smaller]
+== Citations and Formatting
+
+* Many humanities students are still using citation generator websites.
+** ZoteroBib (https://zbib.org) looks promising!
+
+* There is no clear content-format separation for many creative workflows.
+
 
 [.notes]
 --
@@ -506,6 +517,7 @@ image::https://citationstyles.org/assets/img/cropped-csl-logo-600-bordered.png[]
 - We have the technology — let's share it.
 --
 
+[.smaller]
 == Work Submissions
 
 - Creative writing is often not public until it's published.
@@ -581,6 +593,7 @@ image::https://arxiv.org/html/1502.03808v2/Fig16-DiskLensFlare.jpg[]
 
 image::../img/interstellar-paper.png[]
 
+[.tiny]
 [quote]
 To describe new insights... into gravitational lensing when the camera is near the spinning black hole, rather than far away as in almost all prior studies...
 
@@ -597,7 +610,7 @@ To describe new insights... into gravitational lensing when the camera is near t
 --
 
 
-== On Technical Progress for People
+== Technicalogy for People
 
 [quote, Dr. Robert Zubrin]
 [I]f you have it in your power to do something great and important and wonderful, then you should.
