@@ -36,7 +36,7 @@ Joey Carpinelli <joey@carpinelli.email>
 --
 
 
-== Many Creatives Hate AI
+== Many Hate AI!
 
 bsky-cards::https://bsky.app/profile/authorsguild.org/post/3lktctiu6522m,https://bsky.app/profile/3dfrost.bsky.social/post/3ma5ao4kdgk2h,https://bsky.app/profile/mollyjongfast.bsky.social/post/3m35zf2w3ps2j,https://bsky.app/profile/masnick.com/post/3l32cyuxizk2o,https://bsky.app/profile/404media.co/post/3mm2ivguvq22x,https://bsky.app/profile/scumbelievable.bsky.social/post/3mecsr6gi622y,https://bsky.app/profile/scumbelievable.bsky.social/post/3lgqkg5fpsc2v,https://bsky.app/profile/jpbrammer.bsky.social/post/3lgwgacb54k2i,https://bsky.app/profile/notalawyer.bsky.social/post/3mwe5juj4jk22,https://bsky.app/profile/scumbelievable.bsky.social/post/3me7gxmndak2g,https://bsky.app/profile/gabino.bsky.social/post/3lfznh72fvc2u,https://bsky.app/profile/gabino.bsky.social/post/3liwvyehpn225,https://bsky.app/profile/maris.bsky.social/post/3k45dh7dnhx23,https://bsky.app/profile/maris.bsky.social/post/3mvd5ucmdsk2c[]
 
@@ -67,7 +67,7 @@ bsky-cards::https://bsky.app/profile/authorsguild.org/post/3lktctiu6522m,https:/
 --
 
 
-== 2021: GPT-2 / GPT-3
+== GPT-2 / GPT-3
 
 image:lord-robot-andy-github.png[alt]
 
@@ -86,7 +86,7 @@ image:lord-robot-andy-github.png[alt]
 --
 
 [.tufte-slide]
-== 2021: GPT-2 / GPT-3
+== GPT-2 / GPT-3
 
 [source,julia,role=tiny]
 ----
@@ -350,13 +350,12 @@ We don’t want it to be known that we are working on this.
 - I guess, you know, I appreciate the candor.
 --
 
+[.smaller]
 == Legally Gray
 
-- Immediate public backlash!
-- Backlash to the backlash in tech.
-- Unhelpful.
-- Legal gray area.
-- Crying law after confidently training on all of the world's information rings hollow.
+- Copyright and fair use cases are evaluated individually; there's not an apparent clear answer on what the bounds of _fair use_ are.
+- As has been talked about at the Monktoberfest before: technologists working at the bleeding edge of law are responsible for democratically advocating for changing laws.
+- Regardless of law, we should sympathize and understand why destructive scanning is so offensive to creatives.
 
 [.notes]
 --
@@ -390,7 +389,8 @@ image::https://patentimages.storage.googleapis.com/86/99/b8/8ea067c4d87f5f/US075
 
 == Social Problems?
 
-_We should rebuild trust with creatives!_
+- Creatives have lost trust in technologists.
+- We should work to gain that trust back.
 
 [.notes]
 --
@@ -408,10 +408,6 @@ _We should rebuild trust with creatives!_
 [.divider]
 == Technical Solutions
 
-[.tiny]
-[.fragment]
-_Alternate title: software engineer proposes new software._
-
 [.notes]
 --
 - In the remaining time today, I would like to follow in the same mistake that so many early-career technologists take, which is: when presented with a social problem, present a technical solution.
@@ -424,8 +420,10 @@ _Alternate title: software engineer proposes new software._
 _When you share an interesting problem in the hopes that someone will solve it for you._
 
 [.fragment]
+--
 .xkcd
 image::nerd-sniping.png[]
+--
 
 [.notes]
 --
@@ -448,8 +446,8 @@ image::nerd-sniping.png[]
 [cols="1,1,1"]
 |===
 |image:https://git-scm.com/images/logos/downloads/Git-Logo-2Color.svg[]
-|image:https://git-scm.com/images/logos/downloads/Git-Logo-2Color.svg[]
-|image:https://git-scm.com/images/logos/downloads/Git-Logo-2Color.svg[]
+|image:https://brand.github.com/_next/static/media/logo-03.cc5e5332.png[]
+|image:https://raw.githubusercontent.com/automerge/automerge/main/img/brandmark.svg[]
 |===
 
 
@@ -480,31 +478,10 @@ _Casey's work._
 - And I think we can do a lot of good bringing version control to creatives.
 --
 
-== Version Control
-
-```text
-$ ls
-'My Story.docx'
-'My Store v1.docx'
-'My Story v2.docx'
-'My Story (John Feedback).docx'
-'My Story (Final).docx
-```
-
-[.notes]
---
-- A lot of creatives are still doing this.
-- They're still doing the "version one, version two, filename" thing.
-- And in particular, we have newer platforms like code storage that abstract a lot of the Git operations away while still keeping things in Git.
-- This could be a really interesting application for writers — for end users.
-- Just versioning documents kind of behind the scenes.
-- It's kind of doing what Microsoft is doing — saving files to Program Files — but it's an append-only log of snapshots, rather than loose files.
-- And I think that's an improvement for writers.
---
-
 == Citations and Formatting
 
-image:https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/BibTeX_logo.svg/1920px-BibTeX_logo.svg.png[]
+image::https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/BibTeX_logo.svg/1920px-BibTeX_logo.svg.png[]
+image::https://citationstyles.org/assets/img/cropped-csl-logo-600-bordered.png[]
 
 [.notes]
 --
@@ -520,10 +497,14 @@ image:https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/BibTeX_logo.svg/1
 - We have the technology — let's share it.
 --
 
+== Work Submissions
 
-== Word Processing
+- Creative writing is often not public until it's published.
+- Online literary magazines are often run by volunteers who are overworked.
+- Content management systems like Submittable provide _portals_ for writers and magazines, but these systems can be difficult to afford.
 
-image:../img/google-docs.png[]
+[.fragment]
+- _If only there was another volunteer-led community of overworked professionals who could help..._
 
 [.notes]
 --
@@ -544,16 +525,23 @@ image:../img/google-docs.png[]
 
 - Talk to creatives about how they work.
 - No chat bots in the application!
-- Avoid leaking details behind your abstractions.
+- As always, avoid leaking details behind your abstractions.
 
 [.notes]
 --
 - But of course, we have to ask creatives — talk to creatives about how they work.
 - Ask them what they're missing.
 - Ask them what's annoying about their workflows, propose things, and see what they think.
-- I will go out on a limb and say: please don't add a chatbot.
-- I would really be surprised if you find a substantial user base interested in that.
+- I will go out on a limb and say: please don't add a chatbot; I would really be surprised if you find a substantial user base interested in that.
 - And avoid leaking the details behind your abstractions.
+--
+
+== An (Unhelpful) Idea
+
+image::../img/syntax-tree.png[]
+
+[.notes]
+--
 - I learned about tree-sitter this last year, and I'm not proud of this.
 - This wasn't AI psychosis — although, in retrospect, it sounds like it.
 - But I then went to my wife and said, well, what if we had a syntax tree, but for prose?
@@ -577,6 +565,15 @@ image:../img/google-docs.png[]
 
 == Case: Interstellar
 
+image::../img/interstellar-paper.png[]
+
+[quote]
+To describe new insights, from DNGR, into gravitational lensing when the camera is near the spinning black hole, rather than far away as in almost all prior studies; we focus on the shapes, sizes and influence of caustics and critical curves, the creation and annihilation of stellar images, the pattern of multiple images, and the influence of almost-trapped light rays, and we find similar results to the more familiar case of a camera far from the hole.
+
+== Case: Interstellar
+
+image::https://arxiv.org/html/1502.03808v2/Fig16-DiskLensFlare.jpg[]
+
 [.notes]
 --
 - One of my favorite movies is Interstellar, and it's a perfect example of this.
@@ -590,7 +587,7 @@ image:../img/google-docs.png[]
 --
 
 
-== Another Technologist
+== On Technical Progress for People
 
 [quote, Dr. Robert Zubrin]
 [I]f you have it in your power to do something great and important and wonderful, then you should.
