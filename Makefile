@@ -1,8 +1,8 @@
 .PHONY: build serve typecheck lint clean fallback
 
 build:
-	asciidoctor-revealjs -I tools -r og-macro.rb -r bsky-macro.rb -a data-uri -a imagesdir=img presentation.adoc -o dist/presentation.html
-	python3 tools/inline.py
+	asciidoctor-revealjs -I tools -r og-macro.rb -r bsky-macro.rb -a data-uri -a imagesdir=img presentation.adoc -o dist/.presentation.html
+	python3 tools/inline.py dist/.presentation.html dist/presentation.html
 
 serve:
 	@echo "http://localhost:8080/dist/presentation.html"

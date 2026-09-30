@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Inline all local assets into a single self-contained presentation.html.
 
-Reads and rewrites dist/presentation.html in place (must be built first)
-as one self-contained file.
+Usage: inline.py [src [dst]]   (defaults: both dist/presentation.html)
+
+Reads src and writes dst as one self-contained file.
 
 Transforms:
   1. <link rel="stylesheet" href=...>   -> <style>contents</style>
@@ -17,6 +18,7 @@ from __future__ import annotations
 
 import base64
 import re
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -133,7 +135,13 @@ def inline_media(m: re.Match[str]) -> str:
 
 
 def main() -> None:
-    html = SRC.read_text()
+    global SRC, DIST
+    src = Path(sys.argv[1]) if len(sys.argv) > 1 else SRC
+    dst = Path(sys.argv[2]) if len(sys.argv) > 2 else src
+    SRC, DIST = src.resolve(), src.resolve().parent
+    dst = dst.resolve()
+
+    html = src.read_text()
 
     refs = set(
         m.group(1)
@@ -165,8 +173,10 @@ def main() -> None:
     if leftover:
         raise SystemExit(f"unresolved local references: {leftover}")
 
-    SRC.write_text(html)
-    print(f"inlined {SRC.relative_to(ROOT)} ({SRC.stat().st_size / 1024:.0f} KiB)")
+    tmp = dst.with_name(dst.name + ".tmp")
+    tmp.write_text(html)
+    tmp.replace(dst)
+    print(f"inlined {dst.relative_to(ROOT)} ({dst.stat().st_size / 1024:.0f} KiB)")
 
 
 if __name__ == "__main__":

@@ -18,8 +18,12 @@ from typing import Any, ClassVar
 PORT = 8080
 ROOT = Path(__file__).resolve().parent.parent
 DOC = ROOT / "presentation.adoc"
+RAW = ROOT / "dist" / ".presentation.html"
 OUT = ROOT / "dist" / "presentation.html"
 WATCH_DIRS = ("css", "data", "img", "js")
+# Derived data: rewritten by every conversion (og-macro.rb's at_exit hook),
+# so watching it would trigger an endless rebuild loop.
+WATCH_EXCLUDE = {ROOT / "data" / "og-cache.json"}
 ADOC_FLAGS = [
     "-I",
     "tools",
@@ -56,7 +60,9 @@ def log(msg: str) -> None:
 def watched_files() -> list[Path]:
     files = [DOC]
     for d in WATCH_DIRS:
-        files += [p for p in (ROOT / d).rglob("*") if p.is_file()]
+        files += [
+            p for p in (ROOT / d).rglob("*") if p.is_file() and p not in WATCH_EXCLUDE
+        ]
     return files
 
 
@@ -71,23 +77,28 @@ class State:
 
 
 def build() -> tuple[bytes | None, str]:
-    """Run the full pipeline (convert + inline). None on failure."""
+    """Convert to an intermediate, inline it, publish atomically to OUT.
+
+    The converter never writes OUT directly, so a kill (or crash) mid-build
+    can only leave the intermediate stale, never a raw file at OUT.
+    """
     r = subprocess.run(
-        ["asciidoctor-revealjs", *ADOC_FLAGS, str(DOC), "-o", str(OUT)],
+        ["asciidoctor-revealjs", *ADOC_FLAGS, str(DOC), "-o", str(RAW)],
         cwd=ROOT,
         capture_output=True,
         text=True,
     )
     if r.returncode != 0:
         return None, r.stderr
-    raw = OUT.read_bytes()
-    subprocess.run(
-        ["python3", str(ROOT / "tools" / "inline.py")],
+    raw = RAW.read_bytes()
+    ir = subprocess.run(
+        ["python3", str(ROOT / "tools" / "inline.py"), str(RAW), str(OUT)],
         cwd=ROOT,
         capture_output=True,
         text=True,
-        check=True,
     )
+    if ir.returncode != 0:
+        return None, ir.stderr
     return raw, ""
 
 
@@ -99,7 +110,11 @@ def rebuild_loop(last_raw: bytes) -> None:
         if now == last:
             continue
         last = now
-        raw, stderr = build()
+        try:
+            raw, stderr = build()
+        except Exception as e:  # never let the rebuild thread die silently
+            log(f"REBUILD ERROR: {e}")
+            continue
         if raw is None:
             log(f"BUILD FAILED\n{stderr}")
             continue
@@ -140,21 +155,11 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 
 
 def main() -> None:
-    subprocess.run(
-        ["asciidoctor-revealjs", *ADOC_FLAGS, str(DOC), "-o", str(OUT)],
-        cwd=ROOT,
-        check=True,
-        capture_output=True,
-        text=True,
-    )
-    last_raw = OUT.read_bytes()
-    subprocess.run(
-        ["python3", str(ROOT / "tools" / "inline.py")],
-        cwd=ROOT,
-        check=True,
-    )
+    raw, stderr = build()
+    if raw is None:
+        raise SystemExit(f"initial build failed:\n{stderr}")
     State.bump()
-    threading.Thread(target=rebuild_loop, args=(last_raw,), daemon=True).start()
+    threading.Thread(target=rebuild_loop, args=(raw,), daemon=True).start()
     print(f"http://localhost:{PORT}/dist/presentation.html", flush=True)
     http.server.ThreadingHTTPServer(("", PORT), Handler).serve_forever()
 
