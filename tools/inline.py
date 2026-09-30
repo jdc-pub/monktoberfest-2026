@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Inline all local assets into a single self-contained presentation.html.
 
-Reads  dist/presentation.html (must be built first)
-Writes dist/presentation-standalone.html
+Reads and rewrites dist/presentation.html in place (must be built first)
+as one self-contained file.
 
 Transforms:
   1. <link rel="stylesheet" href=...>   -> <style>contents</style>
@@ -22,7 +22,6 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 DIST = ROOT / "dist"
 SRC = DIST / "presentation.html"
-DST = DIST / "presentation-standalone.html"
 REVEAL = ROOT / "node_modules" / "reveal.js"
 
 PLUGINS: list[tuple[str, Path]] = [
@@ -41,11 +40,14 @@ MIME: dict[str, str] = {
     ".svg": "image/svg+xml",
     ".webp": "image/webp",
     ".gif": "image/gif",
+    ".mov": "video/quicktime",
+    ".mp4": "video/mp4",
+    ".webm": "video/webm",
 }
 
 link_re = re.compile(r'<link rel="stylesheet" href="([^"]+)"[^>]*>')
 script_re = re.compile(r'<script src="([^"]+)"></script>')
-img_re = re.compile(r'<img\b[^>]*\bsrc="([^"]+)"[^>]*>')
+media_re = re.compile(r'<(?:img|video|audio|source)\b[^>]*\bsrc="([^"]+)"[^>]*>')
 url_re = re.compile(r"""url\(\s*['"]?([^'")]+)['"]?\s*\)""")
 
 FONT_LICENSE = """<!--
@@ -112,11 +114,21 @@ def inline_script(m: re.Match[str]) -> str:
     return f"<script>\n{js}\n</script>"
 
 
-def inline_img(m: re.Match[str]) -> str:
+def resolve_media(url: str) -> Path:
+    """Media srcs may be relative to dist/ (converter-adjusted) or the root."""
+    for base in (DIST, ROOT):
+        p = (base / url).resolve()
+        if p.is_file():
+            return p
+    raise SystemExit(f"media asset not found for src: {url}")
+
+
+def inline_media(m: re.Match[str]) -> str:
+    """Inline src= on img/video/audio/source tags as a data: URI."""
     if not is_local(m.group(1)):
         return m.group(0)
     return m.group(0).replace(
-        f'src="{m.group(1)}"', f'src="{data_uri((DIST / m.group(1)).resolve())}"'
+        f'src="{m.group(1)}"', f'src="{data_uri(resolve_media(m.group(1)))}"'
     )
 
 
@@ -125,13 +137,13 @@ def main() -> None:
 
     refs = set(
         m.group(1)
-        for tag_re in (link_re, script_re, img_re)
+        for tag_re in (link_re, script_re, media_re)
         for m in tag_re.finditer(html)
         if is_local(m.group(1))
     )
     html = link_re.sub(inline_link, html)
     html = script_re.sub(inline_script, html)
-    html = img_re.sub(inline_img, html)
+    html = media_re.sub(inline_media, html)
 
     plugin_tags = ""
     for global_name, path in PLUGINS:
@@ -153,8 +165,8 @@ def main() -> None:
     if leftover:
         raise SystemExit(f"unresolved local references: {leftover}")
 
-    DST.write_text(html)
-    print(f"wrote {DST.relative_to(ROOT)} ({DST.stat().st_size / 1024:.0f} KiB)")
+    SRC.write_text(html)
+    print(f"inlined {SRC.relative_to(ROOT)} ({SRC.stat().st_size / 1024:.0f} KiB)")
 
 
 if __name__ == "__main__":

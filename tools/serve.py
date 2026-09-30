@@ -20,7 +20,18 @@ ROOT = Path(__file__).resolve().parent.parent
 DOC = ROOT / "presentation.adoc"
 OUT = ROOT / "dist" / "presentation.html"
 WATCH_DIRS = ("css", "data", "img", "js")
-ADOC_FLAGS = ["-I", "tools", "-r", "og-macro.rb", "-r", "bsky-macro.rb"]
+ADOC_FLAGS = [
+    "-I",
+    "tools",
+    "-r",
+    "og-macro.rb",
+    "-r",
+    "bsky-macro.rb",
+    "-a",
+    "data-uri",
+    "-a",
+    "imagesdir=img",
+]
 
 RELOAD_POLL = b"""
 <script>
@@ -59,7 +70,28 @@ class State:
             cls.version += 1
 
 
-def rebuild_loop() -> None:
+def build() -> tuple[bytes | None, str]:
+    """Run the full pipeline (convert + inline). None on failure."""
+    r = subprocess.run(
+        ["asciidoctor-revealjs", *ADOC_FLAGS, str(DOC), "-o", str(OUT)],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+    )
+    if r.returncode != 0:
+        return None, r.stderr
+    raw = OUT.read_bytes()
+    subprocess.run(
+        ["python3", str(ROOT / "tools" / "inline.py")],
+        cwd=ROOT,
+        capture_output=True,
+        text=True,
+        check=True,
+    )
+    return raw, ""
+
+
+def rebuild_loop(last_raw: bytes) -> None:
     last = [p.stat().st_mtime for p in watched_files()]
     while True:
         time.sleep(0.5)
@@ -67,21 +99,16 @@ def rebuild_loop() -> None:
         if now == last:
             continue
         last = now
-        old = OUT.read_bytes() if OUT.is_file() else None
-        r = subprocess.run(
-            ["asciidoctor-revealjs", *ADOC_FLAGS, str(DOC), "-o", str(OUT)],
-            cwd=ROOT,
-            capture_output=True,
-            text=True,
-        )
-        if r.returncode == 0:
-            if OUT.read_bytes() == old:
-                log("no output change")
-                continue
-            State.bump()
-            log(f"rebuilt -> {OUT.relative_to(ROOT)}")
-        else:
-            log(f"BUILD FAILED\n{r.stderr}")
+        raw, stderr = build()
+        if raw is None:
+            log(f"BUILD FAILED\n{stderr}")
+            continue
+        if raw == last_raw:
+            log("no output change")
+            continue
+        last_raw = raw
+        State.bump()
+        log(f"rebuilt -> {OUT.relative_to(ROOT)}")
 
 
 class Handler(http.server.SimpleHTTPRequestHandler):
@@ -117,9 +144,17 @@ def main() -> None:
         ["asciidoctor-revealjs", *ADOC_FLAGS, str(DOC), "-o", str(OUT)],
         cwd=ROOT,
         check=True,
+        capture_output=True,
+        text=True,
+    )
+    last_raw = OUT.read_bytes()
+    subprocess.run(
+        ["python3", str(ROOT / "tools" / "inline.py")],
+        cwd=ROOT,
+        check=True,
     )
     State.bump()
-    threading.Thread(target=rebuild_loop, daemon=True).start()
+    threading.Thread(target=rebuild_loop, args=(last_raw,), daemon=True).start()
     print(f"http://localhost:{PORT}/dist/presentation.html", flush=True)
     http.server.ThreadingHTTPServer(("", PORT), Handler).serve_forever()
 

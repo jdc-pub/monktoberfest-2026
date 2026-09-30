@@ -4,9 +4,9 @@ Deck source: `presentation.adoc` (AsciiDoc → reveal.js via the Ruby
 `asciidoctor-revealjs` gem, styled by `css/theme-override.css`).
 
 ```sh
-make build      # dist/presentation.html (loads tools/og-macro.rb + tools/bsky-macro.rb)
+make build      # dist/presentation.html, single self-contained file
+                #   (loads tools/og-macro.rb + tools/bsky-macro.rb)
 make serve      # live rebuild + browser reload at :8080
-make release    # single self-contained dist/presentation-standalone.html
 make typecheck  # mypy --strict tools
 make fallback   # re-render img/anti-ai-posts-fallback.png from the current posts
 ```
