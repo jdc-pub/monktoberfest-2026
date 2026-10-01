@@ -576,23 +576,23 @@ image::https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wo
 - And avoid leaking the details behind your abstractions.
 --
 
-== An (Unhelpful) Idea
-
-image::../img/syntax-tree.png[]
-
-[.notes]
---
-- I learned about tree-sitter this last year, and I'm not proud of this.
-- This wasn't AI psychosis — although, in retrospect, it sounds like it.
-- But I then went to my wife and said, well, what if we had a syntax tree, but for prose?
-- Like, you could leave a comment on an individual clause.
-- You can see here in the Zed editor that the concrete syntax tree is viewable, it updates in real time, and it's really efficient on every document.
-- And we could have that — we could even have color coding for the different clauses, and versioning for the different clauses.
-- And she was like, "What the fuck are you talking about?"
-- And we fixed the gas leak in our house, and everybody's safe and fine.
-- And she was right.
-- But — let's ask creatives.
---
+// == An (Unhelpful) Idea
+//
+// image::../img/syntax-tree.png[]
+//
+// [.notes]
+// --
+// - I learned about tree-sitter this last year, and I'm not proud of this.
+// - This wasn't AI psychosis — although, in retrospect, it sounds like it.
+// - But I then went to my wife and said, well, what if we had a syntax tree, but for prose?
+// - Like, you could leave a comment on an individual clause.
+// - You can see here in the Zed editor that the concrete syntax tree is viewable, it updates in real time, and it's really efficient on every document.
+// - And we could have that — we could even have color coding for the different clauses, and versioning for the different clauses.
+// - And she was like, "What the fuck are you talking about?"
+// - And we fixed the gas leak in our house, and everybody's safe and fine.
+// - And she was right.
+// - But — let's ask creatives.
+// --
 
 [.divider]
 == Not Zero Sum
