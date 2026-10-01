@@ -507,36 +507,11 @@ html:not(.reveal-print) .reveal .slides > section.present.divider {
     margin-bottom: 6px;
 }
 
-.reveal .bsky-avatar {
-    flex: 0 0 auto;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.reveal .bsky-fallback {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #6f5b92;
-    color: #faf9fc;
-    font-weight: 700;
-    font-size: 15px;
-}
-
 .reveal .bsky-who {
     display: flex;
     flex-direction: column;
     line-height: 1.25;
     min-width: 0;
-}
-
-.reveal .bsky-who strong {
-    font-size: 12.5px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .reveal .bsky-meta {

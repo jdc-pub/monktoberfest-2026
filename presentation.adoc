@@ -234,18 +234,18 @@ og::https://web.archive.org/web/20230715134352/https://www.theverge.com/2023/7/1
 - They felt that these technologies were an existential threat to their field.
 --
 
-== Litigation Documents
+[.tiny]
+== Action Against Microsoft & OpenAI
 
 // https://authorsguild.org/app/uploads/2026/09/Class-Plaintiffs-SUF-9.17.26.pdf
 
-[.tiny]
 [quote, OpenAI Inc. Copyright Infringement Litigation]
 The paper observed that this assumption is unlikely to hold and “may be very bad for Microsoft’s business if it does” both because the public at large will view it “to be an astonishing theft of unprecedented proportions” and because Microsoft’s customers could go on “data strikes” and “purposely withhold their content from Microsoft.” Ex. 183 at -429–30.
 To address these issues, Hecht recommended that Microsoft focus on creating “compliant foundation models” developed “as a deep partnership between us and the people and institutions who produced the data on which they are trained.” Id. at -431.
 
 [.notes]
 --
-- And just recently, this month, we've had some court documents unsealed from the New York Times lawsuit — and it turns out that folks in tech companies were talking about this, too.
+- And just recently, this month, we've had some court documents unsealed from a class action lawsuit — and it turns out that folks in tech companies were talking about this, too.
 - One executive at Microsoft talked about how the public would see this as, quote, "an astonishing theft of unprecedented proportions."
 - It's kind of guaranteed to make headlines — and it did.
 - Something that I thought was interesting: the executive recommended that Microsoft focus on creating "compliant foundation models" developed "as a deep partnership between us and the people and institutions who produced the data on which they are trained."
@@ -254,16 +254,19 @@ To address these issues, Hecht recommended that Microsoft focus on creating “c
 - I would have loved to see this happen.
 --
 
-== Litigation Documents
+[.tiny]
+== Action Against Microsoft & OpenAI
 
 // https://authorsguild.org/app/uploads/2026/09/S.D.N.Y.-25-md-03143-dckt-001982_000-filed-2026-09-17.pdf
 
-[.tiny]
 [quote, OpenAI Inc. Copyright Infringement Litigation]
-A Microsoft document recognizes that nobody wins *[when AI products replace original content]*: "Our AI content strategy has started a 'doom loop' that will hurt the performance of our models and the entire web at the same time: It is highly unusual that an end-product threatens the economic foundations of its essential suppliers, but that is the situation we have created for our LLM business with respect to its ‘content supply chain.’” SF1672.
+Our AI content strategy has started a doom loop that will hurt the performance of our models and the entire web at the same time.
+It is highly unusual that an end product threatens the economic foundations of its essential suppliers, but that is the situation we have created for our LLM business with respect to its content supply chain...
+
 
 [.notes]
 --
+- Same employee!
 - Instead, I think a lot of creatives continued to see AI companies talk about replacing creatives.
 - Another Microsoft document has a quote that our content strategy has started a "doom loop" — basically saying that we, as the AI companies, are going to be sucking up creative work, and that's going to kill a lot of it, and then we're going to compete with it and kill creative work — and then we won't have anything to train on.
 - Kind of an acknowledgment that they did see themselves, at least some of them, as producing products that were, in part, substitutions for artists.
@@ -487,33 +490,47 @@ image::../img/bad-vcs.jpg[]
 --
 
 [.brand-logos]
-== Citations and Formatting
+== Citations
 
 image::https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/BibTeX_logo.svg/1920px-BibTeX_logo.svg.png[]
 image::https://citationstyles.org/assets/img/cropped-csl-logo-600-bordered.png[]
-image::https://typst.app/assets/images/typst.svg[]
-image::https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/500px-CSS3_logo_and_wordmark.svg.png[]
 
 [.smaller]
-== Citations and Formatting
+== Citations
 
 * Many humanities students are still using citation generator websites.
-** ZoteroBib (https://zbib.org) looks promising!
-
-* There is no clear content-format separation for many creative workflows.
-
+* Many don't know that other options exist!
+* Zotero is used by some, but it is more powerful than most need.
+** ZoteroBib (https://zbib.org) looks promising.
 
 [.notes]
 --
 - We also have automatic citation handling through BibTeX and formatting.
-- We've had content–style separation for so long.
-- And a lot of writers today are still using the same word processors.
 - When I talk about BibTeX, creatives look at me like I'm an alien — they're like, "What are you talking about? You don't have to format citations?"
 - I'm like, oh yeah — we have this.
 - Bring it to the journal, and they do the citations.
 - Why can't our conferences do that?
 - I don't know why they're not doing it.
 - I think it's just a lot of friction, and we can ease that friction for them.
+- We have the technology — let's share it.
+--
+
+[.brand-logos]
+== Formatting
+
+image::https://typst.app/assets/images/typst.svg[]
+image::https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/500px-CSS3_logo_and_wordmark.svg.png[]
+
+[.smaller]
+== Formatting
+
+* There is no clear content-format separation for many creative workflows.
+* The `atproto` community has created many writing-rendering-distribution platforms already!
+
+[.notes]
+--
+- We've had content–style separation for so long.
+- And a lot of writers today are still using the same word processors.
 - We have the technology — let's share it.
 --
 

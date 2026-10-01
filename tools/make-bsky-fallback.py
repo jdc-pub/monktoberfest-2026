@@ -36,9 +36,11 @@ FH = SLIDE_H - FIELD_TOP - FIELD_BOTTOM
 
 CARD_W, CARD_MIN_H = 250, 128
 PAD_X, PAD_Y = 14, 10
-AVATAR, AV_GAP, AV_MARGIN = 32, 8, 6
 BODY_FONT, BODY_LH = 12.5, 1.45
 NAME_FONT, META_FONT = 12.5, 11
+# Header is the single-line .bsky-meta (no avatar, no display name):
+# the meta line, plus the header's 6px bottom margin.
+HEADER_H = META_FONT * 1.25 + 6
 TEXT_W = CARD_W - 2 - 2 * PAD_X  # 220: minus borders and padding
 MAX_LINES = 10  # -webkit-line-clamp
 GAP = 24
@@ -52,8 +54,8 @@ META_INK: RGB = tuple(round(c * 0.7 + 255 * 0.3) for c in INK)  # type: ignore[a
 BORDER: RGB = tuple(  # type: ignore[assignment]
     round(c * 0.45 + 255 * 0.55) for c in (111, 91, 146)
 )
-PLUM: RGB = (111, 91, 146)
-PAPER: RGB = (250, 249, 252)
+RADIUS = 8
+
 CARD_ALPHA = 235  # .bsky-show opacity: .92
 RADIUS = 8
 
@@ -62,8 +64,6 @@ FONT_PATH = "/tmp/NotoSans.ttf"  # woff2 -> ttf, converted once
 
 class Author(TypedDict):
     handle: str
-    displayName: str
-    avatar: str
 
 
 class Post(TypedDict):
@@ -74,26 +74,29 @@ class Post(TypedDict):
 
 
 # Card heights as measured in the browser (offsetHeight, post-webfont) —
-# from the "bsky layout:" console log bsky-cards.js emits. PIL's font
-# metrics run ~10-15% short of the browser's, and heights drive both the
-# grid's row count and the slack clamps, so the tool trusts these over its
-# own estimates. Keyed by the deterministic shuffle index; if the post set
-# changes, re-derive from a fresh layout log (or fall back to estimates).
+# from the "bsky layout:" console log bsky-cards.js emits, adjusted from
+# the original avatar-header measurements by the header's shrink (32px
+# avatar row → 29.4px two text lines → 19.75px single meta line). PIL's
+# font metrics run ~10-15% short of the browser's, and heights drive both
+# the grid's row count and the slack clamps, so the tool trusts these over
+# its own estimates. Keyed by the deterministic shuffle index; if the post
+# set or card layout changes, re-derive from a fresh layout log (or fall
+# back to estimates).
 MEASURED_H: dict[int, int] = {
     0: 128,
-    1: 198,
-    2: 230,
-    3: 263,
-    4: 149,
-    5: 149,
-    6: 246,
-    7: 198,
+    1: 179,
+    2: 211,
+    3: 244,
+    4: 130,
+    5: 130,
+    6: 227,
+    7: 179,
     8: 128,
-    9: 133,
-    10: 246,
-    11: 214,
-    12: 246,
-    13: 165,
+    9: 128,
+    10: 227,
+    11: 195,
+    12: 227,
+    13: 146,
 }
 
 POST_URL = re.compile(r"^https://bsky\.app/profile/([^/]+)/post/([^/?#]+)$")
@@ -145,31 +148,7 @@ def ellipsize(text: str, f: ImageFont.FreeTypeFont, width: float) -> str:
 def card_height(post: Post, body_font: ImageFont.FreeTypeFont) -> int:
     lines = wrap(post["text"], TEXT_W, body_font)[:MAX_LINES]
     text_h = len(lines) * BODY_FONT * BODY_LH
-    return max(CARD_MIN_H, round(2 + 2 * PAD_Y + AVATAR + AV_MARGIN + text_h))
-
-
-def draw_avatar(post: Post, size_px: int) -> Image.Image:
-    try:
-        url = post["author"]["avatar"]
-        dest = pathlib.Path("/tmp/avatars") / (post["author"]["handle"] + ".img")
-        dest.parent.mkdir(exist_ok=True)
-        if not dest.exists():
-            urllib.request.urlretrieve(url, dest)  # noqa: S310
-        im: Image.Image = Image.open(dest).convert("RGB").resize((size_px, size_px))
-    except Exception:
-        im = Image.new("RGB", (size_px, size_px), PLUM)
-        ImageDraw.Draw(im).text(
-            (size_px / 2, size_px / 2),
-            post["author"]["displayName"][0],
-            font=font(15, 700),
-            fill=PAPER,
-            anchor="mm",
-        )
-    mask = Image.new("L", (size_px, size_px), 0)
-    ImageDraw.Draw(mask).ellipse((0, 0, size_px, size_px), fill=255)
-    out = Image.new("RGBA", (size_px, size_px), (0, 0, 0, 0))
-    out.paste(im, (0, 0), mask)
-    return out
+    return max(CARD_MIN_H, round(2 + 2 * PAD_Y + HEADER_H + text_h))
 
 
 def appview_get(path: str, params: str) -> str:
@@ -213,8 +192,6 @@ def fetch_posts(urls: set[str]) -> list[Post]:
                 "url": url_of[p["uri"]],
                 "author": {
                     "handle": p["author"]["handle"],
-                    "displayName": p["author"]["displayName"],
-                    "avatar": p["author"]["avatar"],
                 },
                 "date": created.astimezone(timezone.utc).strftime("%b %-d, %Y"),
                 "text": p["record"]["text"],
@@ -299,18 +276,10 @@ def draw_card(post: Post, hi: int, body_font: ImageFont.FreeTypeFont) -> Image.I
         outline=(*BORDER, CARD_ALPHA),
         width=SCALE,
     )
-    av = draw_avatar(post, AVATAR * SCALE)
-    card.paste(av, (PAD_X * SCALE, PAD_Y * SCALE), av)
-    tx = (PAD_X + AVATAR + AV_GAP) * SCALE
-    who_w = TEXT_W - AVATAR - AV_GAP  # the .bsky-who column width
+    tx = PAD_X * SCALE
+    who_w = TEXT_W  # the .bsky-who column width
     d.text(
         (tx, (PAD_Y + 1) * SCALE),
-        ellipsize(post["author"]["displayName"], font(NAME_FONT, 700), who_w),
-        font=font(NAME_FONT, 700),
-        fill=(*INK, CARD_ALPHA),
-    )
-    d.text(
-        (tx, (PAD_Y + 17) * SCALE),
         ellipsize(
             f"@{post['author']['handle']} · {post['date']}",
             font(META_FONT),
@@ -323,7 +292,7 @@ def draw_card(post: Post, hi: int, body_font: ImageFont.FreeTypeFont) -> Image.I
     if len(lines) > MAX_LINES:
         lines = lines[:MAX_LINES]
         lines[-1] = lines[-1][:-1] + "…"
-    ty = (PAD_Y + AVATAR + AV_MARGIN) * SCALE
+    ty = (PAD_Y + HEADER_H) * SCALE
     for n, line in enumerate(lines):
         d.text(
             (PAD_X * SCALE, ty + n * BODY_FONT * BODY_LH * SCALE),

@@ -45,7 +45,7 @@ module Bsky
     "at://#{did_for(m[1])}/app.bsky.feed.post/#{m[2]}"
   end
 
-  # Posts as {url:, author:{handle,displayName,avatar}, date:, text:,
+  # Posts as {url:, author:{handle}, date:, text:,
   # likes:, reposts:} — deleted/unfetchable posts are dropped.
   def posts(urls)
     uris = urls.to_h { |u| [at_uri(u), u] }
@@ -58,8 +58,6 @@ module Bsky
         'url' => url,
         'author' => {
           'handle' => p['author']['handle'],
-          'displayName' => p['author']['displayName'],
-          'avatar' => p['author']['avatar'],
         },
         'date' => date.strftime('%b %-d, %Y'),
         'text' => p['record']['text'],

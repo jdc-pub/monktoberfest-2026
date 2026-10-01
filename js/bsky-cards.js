@@ -64,25 +64,13 @@
     const card = document.createElement("article");
     card.className = "bsky-card";
     const head = document.createElement("header");
-    const av = document.createElement("img");
-    av.className = "bsky-avatar";
-    av.alt = "";
-    if (post.author.avatar) av.src = post.author.avatar;
-    av.onerror = () => {
-      const f = document.createElement("span");
-      f.className = "bsky-avatar bsky-fallback";
-      f.textContent = post.author.displayName[0];
-      av.replaceWith(f);
-    };
     const who = document.createElement("div");
     who.className = "bsky-who";
-    const name = document.createElement("strong");
-    name.textContent = post.author.displayName;
     const meta = document.createElement("span");
     meta.className = "bsky-meta";
     meta.textContent = "@" + post.author.handle + " · " + post.date;
-    who.append(name, meta);
-    head.append(av, who);
+    who.append(meta);
+    head.append(who);
     const body = document.createElement("p");
     body.textContent = post.text;
     card.append(head, body);
