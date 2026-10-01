@@ -1,6 +1,7 @@
 = What Technologists +++<br>+++ Owe Creatives
 Joey Carpinelli <joey@carpinelli.email>
 :imagesdir: ../img
+:figure-caption!:
 :revealjs_theme: simple
 :revealjs_slideNumber: c/t
 :revealjs_transition: none
