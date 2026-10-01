@@ -274,24 +274,23 @@ It is highly unusual that an end product threatens the economic foundations of i
 - And again, the creatives who I know just absolutely hated that.
 --
 
-
-== Substituting Artists
-
-[.og-cards]
---
-og::https://workspace.google.com/blog/product-announcements/workspace-drops-create-and-share-videos-with-ai-in-google-vids/[]
-
-[.tiny]
-[quote]
-Avatars in Google Vids let you scale your on-screen presence, delivering engaging and on-brand messaging without the hassle, time, or expense of traditional studio production.
---
-
-[.notes]
---
-- Google presented Google Vids, letting you scale your on-screen presence without the hassle of traditional studio production.
-- A useful feature, I can imagine, but placing themselves in direct competition with creatives.
---
-
+// == Substituting Artists
+//
+// [.og-cards]
+// --
+// og::https://workspace.google.com/blog/product-announcements/workspace-drops-create-and-share-videos-with-ai-in-google-vids/[]
+//
+// [.tiny]
+// [quote]
+// Avatars in Google Vids let you scale your on-screen presence, delivering engaging and on-brand messaging without the hassle, time, or expense of traditional studio production.
+// --
+//
+// [.notes]
+// --
+// - Google presented Google Vids, letting you scale your on-screen presence without the hassle of traditional studio production.
+// - A useful feature, I can imagine, but placing themselves in direct competition with creatives.
+// --
+//
 == Substituting Artists
 
 [.og-cards]
