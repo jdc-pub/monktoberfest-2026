@@ -76,23 +76,23 @@ image::https://upload.wikimedia.org/wikipedia/commons/9/9a/Wpa-marionette-theate
 --
 
 
-== GPT-2 / GPT-3
-
-image:lord-robot-andy-github.png[alt]
-
-[.notes]
---
-- Because a few years ago, creatives didn't fear these models — no one really feared these models.
-- I remember, it was during the pandemic — I met my wife, we had been dating for a few months.
-- She showed me Cats, the musical, and other musicals by Andrew Lloyd Webber.
-- It was a dark time.
-- But I was a university student — a graduate student in aerospace engineering.
-- I had a university email.
-- And so one day I decided to just sign up for a GPT-2 API key, and later a GPT-3 API key.
-- And I stuck a process-prompt function in an executable notebook.
-- So, kind of like a chat app — but it wasn't a chat.
-- You could put in a custom prompt.
---
+// == GPT-2 / GPT-3
+//
+// image:lord-robot-andy-github.png[alt]
+//
+// [.notes]
+// --
+// - Because a few years ago, creatives didn't fear these models — no one really feared these models.
+// - I remember, it was during the pandemic — I met my wife, we had been dating for a few months.
+// - She showed me Cats, the musical, and other musicals by Andrew Lloyd Webber.
+// - It was a dark time.
+// - But I was a university student — a graduate student in aerospace engineering.
+// - I had a university email.
+// - And so one day I decided to just sign up for a GPT-2 API key, and later a GPT-3 API key.
+// - And I stuck a process-prompt function in an executable notebook.
+// - So, kind of like a chat app — but it wasn't a chat.
+// - You could put in a custom prompt.
+// --
 
 [.tufte-slide]
 == GPT-2 / GPT-3
